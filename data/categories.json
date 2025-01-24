@@ -1,0 +1,129 @@
+[
+  {
+    "label": "Mens Shopping",
+    "href": "/mens-shopping",
+    "icon": "fas fa-male",
+    "subcategories": [
+      {
+        "label": "Shirts",
+        "href": "/mens-shopping/shirts",
+        "icon": "fas fa-tshirt"
+      },
+      {
+        "label": "Pants",
+        "href": "/mens-shopping/pants",
+        "icon": "fas fa-user-tie"
+      },
+      {
+        "label": "Shoes",
+        "href": "/mens-shopping/shoes",
+        "icon": "fas fa-shoe-prints"
+      },
+      {
+        "label": "Accessories",
+        "href": "/mens-shopping/accessories",
+        "icon": "fas fa-hat-cowboy"
+      }
+    ]
+  },
+  {
+    "label": "Womens Fashion",
+    "href": "/womens-fashion",
+    "icon": "fas fa-female",
+    "subcategories": [
+      {
+        "label": "Dresses",
+        "href": "/womens-fashion/dresses",
+        "icon": "fas fa-female"
+      },
+      {
+        "label": "Jewelry",
+        "href": "/womens-fashion/jewelry",
+        "icon": "fas fa-gem"
+      },
+      {
+        "label": "Handbags",
+        "href": "/womens-fashion/handbags",
+        "icon": "fas fa-handbag"
+      },
+      {
+        "label": "Shoes",
+        "href": "/womens-fashion/shoes",
+        "icon": "fas fa-high-heel"
+      }
+    ]
+  },
+
+  {
+    "label": "Watch",
+    "href": "/watch",
+    "icon": "fas fa-clock",
+    "subcategories": [
+      {
+        "label": "Men's Watches",
+        "href": "/watch/mens-watches",
+        "icon": "fas fa-clock"
+      },
+      {
+        "label": "Women's Watches",
+        "href": "/watch/womens-watches",
+        "icon": "fas fa-clock"
+      },
+      {
+        "label": "Smartwatches",
+        "href": "/watch/smartwatches",
+        "icon": "fas fa-watch"
+      },
+      {
+        "label": "Luxury Watches",
+        "href": "/watch/luxury-watches",
+        "icon": "fas fa-gem"
+      }
+    ]
+  },
+
+  {
+    "label": "Ladies Bag",
+    "href": "/ladies-bag",
+    "icon": "fas fa-handbag",
+    "subcategories": [
+      {
+        "label": "Tote Bags",
+        "href": "/ladies-bag/tote-bags",
+        "icon": "fas fa-shopping-bag"
+      },
+      {
+        "label": "Clutches",
+        "href": "/ladies-bag/clutches",
+        "icon": "fas fa-clutch"
+      },
+      {
+        "label": "Backpacks",
+        "href": "/ladies-bag/backpacks",
+        "icon": "fas fa-backpack"
+      }
+    ]
+  },
+  {
+    "label": "Cherry Borka",
+    "href": "/cherry-borka",
+    "icon": "fas fa-scarf",
+    "subcategories": [
+      {
+        "label": "Simple Borka",
+        "href": "/cherry-borka/simple",
+        "icon": "fas fa-scarf"
+      },
+      {
+        "label": "Designer Borka",
+        "href": "/cherry-borka/designer",
+        "icon": "fas fa-scarf"
+      },
+      {
+        "label": "Fancy Borka",
+        "href": "/cherry-borka/fancy",
+        "icon": "fas fa-scarf"
+      }
+    ]
+  }
+]
