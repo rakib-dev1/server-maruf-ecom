@@ -2,7 +2,7 @@
   {
     "label": "Mens Shopping",
     "href": "/mens-shopping",
-    "icon": "fas fa-male",
+    "icon": "https://i.postimg.cc/hjmkrKz9/Men-120x120.jpg",
     "subcategories": [
       {
         "label": "Shirts",
@@ -29,7 +29,7 @@
   {
     "label": "Womens Fashion",
     "href": "/womens-fashion",
-    "icon": "fas fa-female",
+    "icon": "https://i.postimg.cc/7P3vJYy4/women-120x120.jpg",
     "subcategories": [
       {
         "label": "Dresses",
@@ -57,7 +57,7 @@
   {
     "label": "Watch",
     "href": "/watch",
-    "icon": "fas fa-clock",
+    "icon": "https://i.postimg.cc/bvDWyqRK/download.png",
     "subcategories": [
       {
         "label": "Men's Watches",
@@ -85,7 +85,7 @@
   {
     "label": "Ladies Bag",
     "href": "/ladies-bag",
-    "icon": "fas fa-handbag",
+    "icon": "https://i.postimg.cc/KY6V4Cq4/Bags-120x120.png",
     "subcategories": [
       {
         "label": "Tote Bags",
@@ -101,28 +101,6 @@
         "label": "Backpacks",
         "href": "/ladies-bag/backpacks",
         "icon": "fas fa-backpack"
-      }
-    ]
-  },
-  {
-    "label": "Cherry Borka",
-    "href": "/cherry-borka",
-    "icon": "fas fa-scarf",
-    "subcategories": [
-      {
-        "label": "Simple Borka",
-        "href": "/cherry-borka/simple",
-        "icon": "fas fa-scarf"
-      },
-      {
-        "label": "Designer Borka",
-        "href": "/cherry-borka/designer",
-        "icon": "fas fa-scarf"
-      },
-      {
-        "label": "Fancy Borka",
-        "href": "/cherry-borka/fancy",
-        "icon": "fas fa-scarf"
       }
     ]
   }
