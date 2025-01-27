@@ -1,0 +1,708 @@
+[
+  {
+    "title": "Men-Hooded-Navy-Blue-&-Grey-T-Shirt",
+    "price": 200.0,
+    "image": "https://i.postimg.cc/RZ25RCxs/Solid-Men-Hooded-Blue-Grey-T-Shirt.jpg",
+    "tag": "new, sale, offer, discount",
+    "category": [
+      {
+        "label": "mens-shopping",
+        "href": "/mens-shopping",
+        "subcategory": [
+          {
+            "label": "Shirts",
+            "href": "/mens-shopping/shirts"
+          }
+        ]
+      }
+    ],
+    "highlights": ["100% Cotton", "Regular Fit", "Machine Wash"],
+    "description": "Navy Blue and Grey solid T-shirt, has a hood, and long sleeves",
+    "stock": 10,
+    "size": ["S", "M", "L", "XL", "XXL"],
+    "color": ["Navy Blue", "Grey"],
+    "brand": "Roadster",
+    "id": 1,
+    "sku": "MHT001",
+    "createdAt": "2021-06-01T00:00:00.000Z",
+    "updatedAt": "2021-06-01T00:00:00.000Z",
+    "tags": [
+      {
+        "label": "T-Shirt",
+        "href": "/mens-shopping/t-shirt"
+      },
+      {
+        "label": "Hooded",
+        "href": "/mens-shopping/hooded"
+      },
+      {
+        "label": "Roadster",
+        "href": "/mens-shopping/roadster"
+      }
+    ],
+    "review": [
+      {
+        "rating": 4.5,
+        "review": "Good product",
+        "author": "John Doe",
+        "date": "2021-06-01T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "title": "Men's Casual Pants",
+    "price": 1200.0,
+    "image": "https://i.postimg.cc/nrMTYHJw/811h-Y5-ZJd6-S-AC-UL320.jpg",
+    "tag": "sale, offer",
+    "category": [
+      {
+        "label": "mens-shopping",
+        "href": "/mens-shopping",
+        "subcategory": [
+          {
+            "label": "Pants",
+            "href": "/mens-shopping/pants"
+          }
+        ]
+      }
+    ],
+    "highlights": ["Comfortable Fit", "Cotton Blend", "Multiple Colors"],
+    "description": "Stylish and comfortable men's casual pants.",
+    "stock": 20,
+    "size": ["S", "M", "L", "XL"],
+    "color": ["Black", "Beige", "Navy"],
+    "brand": "Levi's",
+    "id": 2,
+    "sku": "MCP002",
+    "createdAt": "2021-07-10T00:00:00.000Z",
+    "updatedAt": "2021-07-10T00:00:00.000Z",
+    "review": [
+      {
+        "rating": 4.8,
+        "review": "Excellent quality",
+        "author": "Mark Smith",
+        "date": "2021-07-11T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "title": "Women's Summer Dress",
+    "price": 1500.0,
+    "image": "https://i.postimg.cc/brQ0Rd5g/71-B6p-L2cjc-L-AC-UL320.jpg",
+    "tag": "new",
+    "category": [
+      {
+        "label": "womens-fashion",
+        "href": "/womens-fashion",
+        "subcategory": [
+          {
+            "label": "Dresses",
+            "href": "/womens-fashion/dresses"
+          }
+        ]
+      }
+    ],
+    "highlights": ["Lightweight", "Floral Print", "Perfect for summer"],
+    "description": "Beautiful floral print summer dress for women.",
+    "stock": 15,
+    "size": ["M", "L", "XL"],
+    "color": ["Red", "Blue"],
+    "brand": "Zara",
+    "id": 3,
+    "sku": "WSD003",
+    "createdAt": "2021-06-15T00:00:00.000Z",
+    "updatedAt": "2021-06-15T00:00:00.000Z",
+    "review": [
+      {
+        "rating": 4.2,
+        "review": "Very comfortable",
+        "author": "Anna Taylor",
+        "date": "2021-06-16T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "title": "Luxury Men's Watch",
+    "price": 3000.0,
+    "image": "https://i.postimg.cc/dVX7LwHV/81-YJMXUex-JL-AC-UL320.jpg",
+    "tag": "luxury",
+    "category": [
+      {
+        "label": "watch",
+        "href": "/watch",
+        "subcategory": [
+          {
+            "label": "Men's Watches",
+            "href": "/watch/mens-watches"
+          }
+        ]
+      }
+    ],
+    "highlights": ["Automatic Movement", "Water-resistant", "Leather Strap"],
+    "description": "A luxury men's watch with an exquisite design.",
+    "stock": 5,
+    "brand": "Rolex",
+    "id": 4,
+    "sku": "LMW004",
+    "createdAt": "2021-08-01T00:00:00.000Z",
+    "updatedAt": "2021-08-01T00:00:00.000Z",
+    "review": [
+      {
+        "rating": 5.0,
+        "review": "Worth every penny!",
+        "author": "Michael Jordan",
+        "date": "2021-08-02T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "title": "Smartwatch with Fitness Tracker",
+    "price": 250.0,
+    "image": "https://i.postimg.cc/pLNbTSQt/81-Uw1-RKHbd-L-AC-UL320.jpg",
+    "tag": "smart",
+    "category": [
+      {
+        "label": "watch",
+        "href": "/watch",
+        "subcategory": [
+          {
+            "label": "Smartwatches",
+            "href": "/watch/smartwatches"
+          }
+        ]
+      }
+    ],
+    "highlights": ["Heart Rate Monitor", "GPS Nearby", "Waterproof"],
+    "description": "Feature-rich smartwatch with fitness tracking capabilities.",
+    "stock": 40,
+    "brand": "Samsung",
+    "id": 5,
+    "sku": "SWFT005",
+    "createdAt": "2021-09-01T00:00:00.000Z",
+    "updatedAt": "2021-09-01T00:00:00.000Z",
+    "review": [
+      {
+        "rating": 4.7,
+        "review": "Great for workouts!",
+        "author": "Jessica Parker",
+        "date": "2021-09-02T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "title": "Women's Jewelry Set",
+    "price": 500.0,
+    "image": "https://i.postimg.cc/KzYvNWsH/81-YUtid-OP5-L-AC-UL320.jpg",
+    "tag": "elegant",
+    "category": [
+      {
+        "label": "jewellery",
+        "href": "/jewellery",
+        "subcategory": [
+          {
+            "label": "Necklaces",
+            "href": "/jewellery/necklaces"
+          }
+        ]
+      }
+    ],
+    "highlights": ["Sterling Silver", "Elegant Design", "Hypoallergenic"],
+    "description": "A beautiful jewelry set for women, perfect for any occasion.",
+    "stock": 30,
+    "brand": "Tiffany & Co.",
+    "id": 6,
+    "sku": "WJS006",
+    "createdAt": "2021-05-01T00:00:00.000Z",
+    "updatedAt": "2021-05-01T00:00:00.000Z",
+    "review": [
+      {
+        "rating": 4.9,
+        "review": "Absolutely stunning!",
+        "author": "Sara Connor",
+        "date": "2021-05-02T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "title": "Leather Backpack",
+    "price": 800.0,
+    "image": "https://i.postimg.cc/vHwDR01c/71-Nua-D-kxu-L-AC-UL320.jpg",
+    "tag": "new",
+    "category": [
+      {
+        "label": "ladies-bag",
+        "href": "/ladies-bag",
+        "subcategory": [
+          {
+            "label": "Backpacks",
+            "href": "/ladies-bag/backpacks"
+          }
+        ]
+      }
+    ],
+    "highlights": ["High Quality Leather", "Multiple Compartments", "Stylish"],
+    "description": "A trendy leather backpack suitable for daily use.",
+    "stock": 15,
+    "brand": "Fossil",
+    "id": 7,
+    "sku": "LB007",
+    "createdAt": "2021-09-15T00:00:00.000Z",
+    "updatedAt": "2021-09-15T00:00:00.000Z",
+    "review": [
+      {
+        "rating": 4.6,
+        "review": "Perfect for college!",
+        "author": "Emma Watson",
+        "date": "2021-09-16T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "title": "Stylish Sunglasses",
+    "price": 150.0,
+    "image": "https://i.postimg.cc/XYZPwk8k/61-LX2-SWom-WL-AC-UL320.jpg",
+    "tag": "fashion",
+    "category": [
+      {
+        "label": "accessories",
+        "href": "/accessories",
+        "subcategory": [
+          {
+            "label": "Sunglasses",
+            "href": "/accessories/sunglasses"
+          }
+        ]
+      }
+    ],
+    "highlights": ["UV Protection", "Polarized", "Fashionable"],
+    "description": "Stylish sunglasses for a fashionable look.",
+    "stock": 25,
+    "brand": "Ray-Ban",
+    "id": 8,
+    "sku": "SS008",
+    "createdAt": "2021-10-01T00:00:00.000Z",
+    "updatedAt": "2021-10-01T00:00:00.000Z",
+    "review": [
+      {
+        "rating": 4.8,
+        "review": "Very stylish!",
+        "author": "Tom Hanks",
+        "date": "2021-10-02T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "title": "Casual Sneakers",
+    "price": 800.0,
+    "image": "https://i.postimg.cc/qvdbW6H8/71f-JS967s-VL-AC-UL320.jpg",
+    "tag": "trendy",
+    "category": [
+      {
+        "label": "shoes",
+        "href": "/shoes",
+        "subcategory": [
+          {
+            "label": "Sneakers",
+            "href": "/shoes/sneakers"
+          }
+        ]
+      }
+    ],
+    "highlights": ["Lightweight", "Comfortable Fit", "Multiple Colors"],
+    "description": "Casual sneakers perfect for everyday wear.",
+    "stock": 50,
+    "size": ["6", "7", "8", "9", "10"],
+    "color": ["Black", "White", "Blue"],
+    "brand": "Nike",
+    "id": 9,
+    "sku": "CS009",
+    "createdAt": "2021-07-20T00:00:00.000Z",
+    "updatedAt": "2021-07-20T00:00:00.000Z",
+    "review": [
+      {
+        "rating": 4.5,
+        "review": "Very comfortable to wear",
+        "author": "Chris Evans",
+        "date": "2021-07-21T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "title": "Cotton Scarf",
+    "price": 100.0,
+    "image": "https://i.postimg.cc/QCdsQY0d/7154-Vp-Ob81-L-AC-UL320.jpg",
+    "tag": "fashion",
+    "category": [
+      {
+        "label": "accessories",
+        "href": "/accessories",
+        "subcategory": [
+          {
+            "label": "Scarves",
+            "href": "/accessories/scarves"
+          }
+        ]
+      }
+    ],
+    "highlights": ["Soft Cotton", "Multiple Colors", "Versatile Use"],
+    "description": "A soft and stylish cotton scarf for all seasons.",
+    "stock": 100,
+    "brand": "H&M",
+    "id": 10,
+    "sku": "CS010",
+    "createdAt": "2021-06-05T00:00:00.000Z",
+    "updatedAt": "2021-06-05T00:00:00.000Z",
+    "review": [
+      {
+        "rating": 4.3,
+        "review": "Great for layering!",
+        "author": "Elizabeth Queens",
+        "date": "2021-06-06T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "title": "Formal Loafers",
+    "price": 1200.0,
+    "image": "https://i.postimg.cc/BvBdmc8L/71k-Ix56-R0-JL-AC-SY500.jpg",
+    "tag": "formalwear",
+    "category": [
+      {
+        "label": "shoes",
+        "href": "/shoes",
+        "subcategory": [
+          {
+            "label": "Formal Shoes",
+            "href": "/shoes/formal-shoes"
+          }
+        ]
+      }
+    ],
+    "highlights": ["Leather", "Comfortable Fit", "Stylish Design"],
+    "description": "Elegant formal loafers for men.",
+    "stock": 20,
+    "size": ["7", "8", "9", "10"],
+    "color": ["Brown", "Black"],
+    "brand": "Bata",
+    "id": 11,
+    "sku": "FL011",
+    "createdAt": "2021-08-11T00:00:00.000Z",
+    "updatedAt": "2021-08-11T00:00:00.000Z",
+    "review": [
+      {
+        "rating": 4.5,
+        "review": "Looks great with suits!",
+        "author": "Ryan Reynolds",
+        "date": "2021-08-12T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "title": "Trendy Handbag",
+    "price": 1200.0,
+    "image": "https://i.postimg.cc/gcLPWhQ5/8129e6nr-VPL-AC-UL320.jpg",
+    "tag": "fashion",
+    "category": [
+      {
+        "label": "womens-fashion",
+        "href": "/womens-fashion",
+        "subcategory": [
+          {
+            "label": "Handbags",
+            "href": "/womens-fashion/handbags"
+          }
+        ]
+      }
+    ],
+    "highlights": ["Stylish", "Spacious", "Multiple Compartments"],
+    "description": "A trendy handbag perfect for outings.",
+    "stock": 30,
+    "brand": "Chanel",
+    "id": 12,
+    "sku": "TH012",
+    "createdAt": "2021-09-15T00:00:00.000Z",
+    "updatedAt": "2021-09-15T00:00:00.000Z",
+    "review": [
+      {
+        "rating": 4.6,
+        "review": "Perfect size!",
+        "author": "Sophia Liu",
+        "date": "2021-09-16T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "title": "Elegant Earrings",
+    "price": 300.0,
+    "image": "https://i.postimg.cc/25Lx6zYz/51n-TCXi-TNm-L-AC-UL320.jpg",
+    "tag": "jewelry",
+    "category": [
+      {
+        "label": "jewellery",
+        "href": "/jewellery",
+        "subcategory": [
+          {
+            "label": "Earrings",
+            "href": "/jewellery/earrings"
+          }
+        ]
+      }
+    ],
+    "highlights": ["Stud Style", "Sterling Silver", "Hypoallergenic"],
+    "description": "Elegant earrings perfect for everyday wear.",
+    "stock": 50,
+    "brand": "Swarovski",
+    "id": 13,
+    "sku": "EE013",
+    "createdAt": "2021-06-20T00:00:00.000Z",
+    "updatedAt": "2021-06-20T00:00:00.000Z",
+    "review": [
+      {
+        "rating": 4.7,
+        "review": "Classic and beautiful!",
+        "author": "Emma Watson",
+        "date": "2021-06-21T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "title": "Sporty Sports Shoes",
+    "price": 950.0,
+    "image": "https://i.postimg.cc/zGKBXMQs/71njdp3-Zhb-L-AC-UL320.jpg",
+    "tag": "sports",
+    "category": [
+      {
+        "label": "shoes",
+        "href": "/shoes",
+        "subcategory": [
+          {
+            "label": "Sports Shoes",
+            "href": "/shoes/sports-shoes"
+          }
+        ]
+      }
+    ],
+    "highlights": ["Breathable", "Cushioned Sole", "Stylish Design"],
+    "description": "Sporty shoes for your active lifestyle.",
+    "stock": 50,
+    "size": ["6", "7", "8", "9", "10"],
+    "color": ["Gray", "Black"],
+    "brand": "Adidas",
+    "id": 14,
+    "sku": "SS014",
+    "createdAt": "2021-10-10T00:00:00.000Z",
+    "updatedAt": "2021-10-10T00:00:00.000Z",
+    "review": [
+      {
+        "rating": 4.5,
+        "review": "Great for running!",
+        "author": "Chris Hemsworth",
+        "date": "2021-10-11T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "title": "Classic Brooch",
+    "price": 400.0,
+    "image": "https://i.postimg.cc/85jsD5gH/81-18-RTDli-L-AC-UL320.jpg",
+    "tag": "vintage",
+    "category": [
+      {
+        "label": "jewellery",
+        "href": "/jewellery",
+        "subcategory": [
+          {
+            "label": "Brooches",
+            "href": "/jewellery/brooches"
+          }
+        ]
+      }
+    ],
+    "highlights": ["Vintage Design", "High-Quality Material", "Elegant Look"],
+    "description": "A beautiful classic brooch that adds charm to any outfit.",
+    "stock": 40,
+    "brand": "Gucci",
+    "id": 15,
+    "sku": "CB015",
+    "createdAt": "2021-11-01T00:00:00.000Z",
+    "updatedAt": "2021-11-01T00:00:00.000Z",
+    "review": [
+      {
+        "rating": 4.9,
+        "review": "A timeless piece!",
+        "author": "Rachel Green",
+        "date": "2021-11-02T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "title": "Designer Clutch",
+    "price": 800.0,
+    "image": "https://i.postimg.cc/J4GwqkcK/71-LWFw3-IO1-L-AC-UL320.jpg",
+    "tag": "fashion",
+    "category": [
+      {
+        "label": "ladies-bag",
+        "href": "/ladies-bag",
+        "subcategory": [
+          {
+            "label": "Clutches",
+            "href": "/ladies-bag/clutches"
+          }
+        ]
+      }
+    ],
+    "highlights": ["Designer Label", "Elegant Design", "Perfect for Events"],
+    "description": "A stunning designer clutch for special occasions.",
+    "stock": 10,
+    "brand": "Louis Vuitton",
+    "id": 16,
+    "sku": "DC016",
+    "createdAt": "2021-09-10T00:00:00.000Z",
+    "updatedAt": "2021-09-10T00:00:00.000Z",
+    "review": [
+      {
+        "rating": 5.0,
+        "review": "An exquisite piece!",
+        "author": "Michelle Williams",
+        "date": "2021-09-11T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "title": "Warm Gloves",
+    "price": 250.0,
+    "image": "https://i.postimg.cc/SxPcMwQD/71-Oy6-LGOy7-L-AC-UL320.jpg",
+    "tag": "winter",
+    "category": [
+      {
+        "label": "accessories",
+        "href": "/accessories",
+        "subcategory": [
+          {
+            "label": "Gloves",
+            "href": "/accessories/gloves"
+          }
+        ]
+      }
+    ],
+    "highlights": ["Warm and Cozy", "Stylish", "Multiple Colors"],
+    "description": "Warm gloves to keep your hands cozy in winters.",
+    "stock": 60,
+    "brand": "Under Armour",
+    "id": 17,
+    "sku": "WG017",
+    "createdAt": "2021-10-01T00:00:00.000Z",
+    "updatedAt": "2021-10-01T00:00:00.000Z",
+    "review": [
+      {
+        "rating": 4.4,
+        "review": "Good quality!",
+        "author": "Chris Pratt",
+        "date": "2021-10-02T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "title": "Trendy Tote Bag",
+    "price": 600.0,
+    "image": "https://i.postimg.cc/KvH1qtXY/91-Hf-Ht-FIn-KL-AC-UL320.jpg",
+    "tag": "fashion",
+    "category": [
+      {
+        "label": "ladies-bag",
+        "href": "/ladies-bag",
+        "subcategory": [
+          {
+            "label": "Tote Bags",
+            "href": "/ladies-bag/tote-bags"
+          }
+        ]
+      }
+    ],
+    "highlights": ["Spacious", "Stylish", "Durable Material"],
+    "description": "Trendy tote bag suitable for daily use.",
+    "stock": 20,
+    "brand": "Michael Kors",
+    "id": 18,
+    "sku": "TT018",
+    "createdAt": "2021-08-05T00:00:00.000Z",
+    "updatedAt": "2021-08-05T00:00:00.000Z",
+    "review": [
+      {
+        "rating": 4.7,
+        "review": "Perfect for grocery shopping!",
+        "author": "Jessica Jones",
+        "date": "2021-08-06T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "title": "Casual Belt",
+    "price": 350.0,
+    "image": "https://i.postimg.cc/25Nzf1bH/Accessories-120x120.jpg",
+    "tag": "accessory",
+    "category": [
+      {
+        "label": "accessories",
+        "href": "/accessories",
+        "subcategory": [
+          {
+            "label": "Belts",
+            "href": "/accessories/belts"
+          }
+        ]
+      }
+    ],
+    "highlights": ["Genuine Leather", "Adjustable size", "Stylish Look"],
+    "description": "A casual belt that complements your outfits.",
+    "stock": 30,
+    "brand": "Fossil",
+    "id": 19,
+    "sku": "CB019",
+    "createdAt": "2021-09-06T00:00:00.000Z",
+    "updatedAt": "2021-09-06T00:00:00.000Z",
+    "review": [
+      {
+        "rating": 4.5,
+        "review": "Great leather quality!",
+        "author": "Leonardo DiCaprio",
+        "date": "2021-09-07T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "title": "Elegant Ring",
+    "price": 800.0,
+    "image": "https://i.postimg.cc/76pZBzvs/714-Zfc8bg-PL-AC-UL320.jpg",
+    "tag": "ring",
+    "category": [
+      {
+        "label": "jewellery",
+        "href": "/jewellery",
+        "subcategory": [
+          {
+            "label": "Rings",
+            "href": "/jewellery/rings"
+          }
+        ]
+      }
+    ],
+    "highlights": ["Gold Plated", "Stylish Design", "Perfect Gift"],
+    "description": "An elegant ring that makes a perfect gift for loved ones.",
+    "stock": 15,
+    "brand": "Pandora",
+    "id": 20,
+    "sku": "ER020",
+    "createdAt": "2021-10-20T00:00:00.000Z",
+    "updatedAt": "2021-10-20T00:00:00.000Z",
+    "review": [
+      {
+        "rating": 4.8,
+        "review": "Loved it!",
+        "author": "Emma Watson",
+        "date": "2021-10-21T00:00:00.000Z"
+      }
+    ]
+  }
+]

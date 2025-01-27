@@ -103,5 +103,116 @@
         "icon": "fas fa-backpack"
       }
     ]
+  },
+  {
+    "label": "Shoes",
+    "href": "/shoes",
+    "icon": "https://i.postimg.cc/vmrZ1Y7P/Shoes-120x120.jpg",
+    "subcategories": [
+      {
+        "label": "Sneakers",
+        "href": "/shoes/sneakers",
+        "icon": "fas fa-running"
+      },
+      {
+        "label": "Boots",
+        "href": "/shoes/boots",
+        "icon": "fas fa-boot"
+      },
+      {
+        "label": "Sandals",
+        "href": "/shoes/sandals",
+        "icon": "fas fa-slippers"
+      },
+      {
+        "label": "Formal Shoes",
+        "href": "/shoes/formal-shoes",
+        "icon": "fas fa-shoe-prints"
+      },
+      {
+        "label": "Sports Shoes",
+        "href": "/shoes/sports-shoes",
+        "icon": "fas fa-shoe-track"
+      }
+    ]
+  },
+  {
+    "label": "Jewellery",
+    "href": "/jewellery",
+    "icon": "https://i.postimg.cc/g0srScwx/Jewellery-120x120.jpg",
+    "subcategories": [
+      {
+        "label": "Necklaces",
+        "href": "/jewellery/necklaces",
+        "icon": "fas fa-gem"
+      },
+      {
+        "label": "Earrings",
+        "href": "/jewellery/earrings",
+        "icon": "fas fa-ear"
+      },
+      {
+        "label": "Bracelets",
+        "href": "/jewellery/bracelets",
+        "icon": "fas fa-link"
+      },
+      {
+        "label": "Rings",
+        "href": "/jewellery/rings",
+        "icon": "fas fa-ring"
+      },
+      {
+        "label": "Anklets",
+        "href": "/jewellery/anklets",
+        "icon": "fas fa-foot"
+      },
+      {
+        "label": "Brooches",
+        "href": "/jewellery/brooches",
+        "icon": "fas fa-bow"
+      }
+    ]
+  },
+  {
+    "label": "Accessories",
+    "href": "/accessories",
+    "icon": "https://i.postimg.cc/25Nzf1bH/Accessories-120x120.jpg",
+    "subcategories": [
+      {
+        "label": "Watches",
+        "href": "/accessories/watches",
+        "icon": "fas fa-watch"
+      },
+      {
+        "label": "Belts",
+        "href": "/accessories/belts",
+        "icon": "fas fa-belt"
+      },
+      {
+        "label": "Hats",
+        "href": "/accessories/hats",
+        "icon": "fas fa-hat-cowboy"
+      },
+      {
+        "label": "Sunglasses",
+        "href": "/accessories/sunglasses",
+        "icon": "fas fa-glasses"
+      },
+      {
+        "label": "Scarves",
+        "href": "/accessories/scarves",
+        "icon": "fas fa-scarf"
+      },
+      {
+        "label": "Gloves",
+        "href": "/accessories/gloves",
+        "icon": "fas fa-hand-sparkles"
+      },
+      {
+        "label": "Wallets",
+        "href": "/accessories/wallets",
+        "icon": "fas fa-wallet"
+      }
+    ]
   }
 ]

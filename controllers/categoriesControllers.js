@@ -1,6 +1,7 @@
-const categoriesData = require("../data/categories.json");
+const { db } = require("../config/db");
 const getCategories = async (req, res) => {
-  res.json(categoriesData);
+  const categories = await db.collection("categories").find().toArray();
+  res.json(categories);
 };
 
 module.exports = { getCategories };
