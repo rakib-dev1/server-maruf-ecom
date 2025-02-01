@@ -4,6 +4,21 @@ const getProducts = async (req, res) => {
   const products = await db.collection("products").find().toArray();
   res.json(products);
 };
+const getHighLights = async (req, res) => {
+  try {
+    const { category } = req.query;
+    console.log(category);
+
+    const highlights = await db
+      .collection("highlight")
+      .find({ category: category })
+      .toArray();
+    res.json(highlights);
+  } catch (error) {
+    console.error("Error fetching highlights:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
 
 const getFeaturedProducts = async (req, res) => {
   const categories = [
@@ -26,4 +41,5 @@ const getFeaturedProducts = async (req, res) => {
   }
   res.json(featuredProducts);
 };
-module.exports = { getProducts, getFeaturedProducts };
+
+module.exports = { getProducts, getFeaturedProducts, getHighLights };

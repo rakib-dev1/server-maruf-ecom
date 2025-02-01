@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Hightlight 1",
+    "description": "Description 1",
+    "image": "https://i.postimg.cc/zv4s0J0f/Product-box-banner-1.jpg",
+    "category": "Mens Fashion"
+  },
+  {
+    "title": "Hightlight 2",
+    "description": "Description 2",
+    "image": "https://i.postimg.cc/7PcrxVwy/Product-box-banner-3.jpg",
+    "category": "Mens Fashion"
+  },
+  {
+    "title": "Hightlight 3",
+    "description": "Description 3",
+    "image": "https://i.postimg.cc/2SQs7Nvz/Product-box-banner-4.jpg",
+    "category": "Womens Fashion"
+  },
+  {
+    "title": "Hightlight 4",
+    "description": "Description 4",
+    "image": "https://i.postimg.cc/gJTQ2z9K/Women-Off-White-Printed-Blouson-Top.jpg",
+    "category": "Womens Fashion"
+  }
+]
