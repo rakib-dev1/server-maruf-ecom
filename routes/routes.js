@@ -9,7 +9,7 @@ const {
   addNewCategory,
 } = require("../controllers/categoriesControllers");
 const authenticate = require("../middlewares/authMiddleware");
-const authLogin = require("../controllers/authControllers");
+const {authLogin,authSignup }= require("../controllers/authControllers");
 
 const route = express.Router();
 route.get("/", (req, res) => res.send("Maruf Ecom Server is running..😘"));
@@ -25,5 +25,6 @@ route.post("/categories", addNewCategory);
 
 //auth route
 route.post("/auth/login", authLogin);
+route.post('/auth/signup',authSignup)
 
 module.exports = route;
