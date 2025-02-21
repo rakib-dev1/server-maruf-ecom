@@ -4,14 +4,26 @@ const {
   getFeaturedProducts,
   getHighLights,
 } = require("../controllers/productsControllers");
-const { getCategories } = require("../controllers/categoriesControllers");
+const {
+  getCategories,
+  addNewCategory,
+} = require("../controllers/categoriesControllers");
+const authenticate = require("../middlewares/authMiddleware");
+const authLogin = require("../controllers/authControllers");
+
 const route = express.Router();
 route.get("/", (req, res) => res.send("Maruf Ecom Server is running..😘"));
 
-// get route
-route.get("/products", getProducts);
+// get rout
+route.get("/products", authenticate, getProducts);
 route.get("/categories", getCategories);
 route.get("/featured-products", getFeaturedProducts);
 route.get("/highlights", getHighLights);
+
+// post route
+route.post("/categories", addNewCategory);
+
+//auth route
+route.post("/auth/login", authLogin);
 
 module.exports = route;

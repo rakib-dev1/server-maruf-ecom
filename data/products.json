@@ -6,12 +6,12 @@
     "tag": "new, sale, offer, discount",
     "category": [
       {
-        "label": "mens-shopping",
-        "href": "/mens-shopping",
+        "label": "Mens Fashion",
+        "href": "/mens-fashion",
         "subcategory": [
           {
-            "label": "Shirts",
-            "href": "/mens-shopping/shirts"
+            "label": "shirts",
+            "href": "/mens-fashion/shirts"
           }
         ]
       }
@@ -29,15 +29,15 @@
     "tags": [
       {
         "label": "T-Shirt",
-        "href": "/mens-shopping/t-shirt"
+        "href": "/mens-fashion/t-shirt"
       },
       {
         "label": "Hooded",
-        "href": "/mens-shopping/hooded"
+        "href": "/mens-fashion/hooded"
       },
       {
         "label": "Roadster",
-        "href": "/mens-shopping/roadster"
+        "href": "/mens-fashion/roadster"
       }
     ],
     "review": [
@@ -56,12 +56,12 @@
     "tag": "sale, offer",
     "category": [
       {
-        "label": "mens-shopping",
-        "href": "/mens-shopping",
+        "label": "men"/mens-fashion"",
+        "href": "/mens-fashion"",
         "subcategory": [
           {
-            "label": "Pants",
-            "href": "/mens-shopping/pants"
+            "label": "pants",
+            "href": "/mens-fashion"/pants"
           }
         ]
       }
@@ -96,7 +96,7 @@
         "href": "/womens-fashion",
         "subcategory": [
           {
-            "label": "Dresses",
+            "label": "dresses",
             "href": "/womens-fashion/dresses"
           }
         ]
@@ -132,7 +132,7 @@
         "href": "/watch",
         "subcategory": [
           {
-            "label": "Men's Watches",
+            "label": "men's watches",
             "href": "/watch/mens-watches"
           }
         ]
@@ -166,7 +166,7 @@
         "href": "/watch",
         "subcategory": [
           {
-            "label": "Smartwatches",
+            "label": "smartwatches",
             "href": "/watch/smartwatches"
           }
         ]
@@ -200,7 +200,7 @@
         "href": "/jewellery",
         "subcategory": [
           {
-            "label": "Necklaces",
+            "label": "necklaces",
             "href": "/jewellery/necklaces"
           }
         ]
@@ -234,7 +234,7 @@
         "href": "/ladies-bag",
         "subcategory": [
           {
-            "label": "Backpacks",
+            "label": "backpacks",
             "href": "/ladies-bag/backpacks"
           }
         ]
@@ -268,7 +268,7 @@
         "href": "/accessories",
         "subcategory": [
           {
-            "label": "Sunglasses",
+            "label": "sunglasses",
             "href": "/accessories/sunglasses"
           }
         ]
@@ -302,7 +302,7 @@
         "href": "/shoes",
         "subcategory": [
           {
-            "label": "Sneakers",
+            "label": "sneakers",
             "href": "/shoes/sneakers"
           }
         ]
@@ -338,7 +338,7 @@
         "href": "/accessories",
         "subcategory": [
           {
-            "label": "Scarves",
+            "label": "scarves",
             "href": "/accessories/scarves"
           }
         ]
@@ -372,7 +372,7 @@
         "href": "/shoes",
         "subcategory": [
           {
-            "label": "Formal Shoes",
+            "label": "formal shoes",
             "href": "/shoes/formal-shoes"
           }
         ]
@@ -408,7 +408,7 @@
         "href": "/womens-fashion",
         "subcategory": [
           {
-            "label": "Handbags",
+            "label": "handbags",
             "href": "/womens-fashion/handbags"
           }
         ]
@@ -442,7 +442,7 @@
         "href": "/jewellery",
         "subcategory": [
           {
-            "label": "Earrings",
+            "label": "earrings",
             "href": "/jewellery/earrings"
           }
         ]
@@ -476,7 +476,7 @@
         "href": "/shoes",
         "subcategory": [
           {
-            "label": "Sports Shoes",
+            "label": "sports shoes",
             "href": "/shoes/sports-shoes"
           }
         ]
@@ -512,7 +512,7 @@
         "href": "/jewellery",
         "subcategory": [
           {
-            "label": "Brooches",
+            "label": "brooches",
             "href": "/jewellery/brooches"
           }
         ]
@@ -546,7 +546,7 @@
         "href": "/ladies-bag",
         "subcategory": [
           {
-            "label": "Clutches",
+            "label": "clutches",
             "href": "/ladies-bag/clutches"
           }
         ]
@@ -580,7 +580,7 @@
         "href": "/accessories",
         "subcategory": [
           {
-            "label": "Gloves",
+            "label": "gloves",
             "href": "/accessories/gloves"
           }
         ]
@@ -614,7 +614,7 @@
         "href": "/ladies-bag",
         "subcategory": [
           {
-            "label": "Tote Bags",
+            "label": "tote Bags",
             "href": "/ladies-bag/tote-bags"
           }
         ]
@@ -648,7 +648,7 @@
         "href": "/accessories",
         "subcategory": [
           {
-            "label": "Belts",
+            "label": "belts",
             "href": "/accessories/belts"
           }
         ]
@@ -682,7 +682,7 @@
         "href": "/jewellery",
         "subcategory": [
           {
-            "label": "Rings",
+            "label": "rings",
             "href": "/jewellery/rings"
           }
         ]

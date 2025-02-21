@@ -1,217 +1,47 @@
 [
   {
     "label": "Mens Shopping",
-    "href": "/mens-shopping",
+    "href": "mens-shopping",
     "icon": "https://i.postimg.cc/hjmkrKz9/Men-120x120.jpg",
     "subcategories": [
       {
-        "label": "Shirts",
-        "href": "/mens-shopping/shirts",
-        "icon": "fas fa-tshirt"
+        "label": "shirts",
+        "href": "/mens-shopping/shirts"
       },
       {
-        "label": "Pants",
-        "href": "/mens-shopping/pants",
-        "icon": "fas fa-user-tie"
+        "label": "pants",
+        "href": "/mens-shopping/pants"
       },
       {
-        "label": "Shoes",
-        "href": "/mens-shopping/shoes",
-        "icon": "fas fa-shoe-prints"
+        "label": "shoes",
+        "href": "/mens-shopping/shoes"
       },
       {
-        "label": "Accessories",
-        "href": "/mens-shopping/accessories",
-        "icon": "fas fa-hat-cowboy"
+        "label": "accessories",
+        "href": "/mens-shopping/accessories"
       }
     ]
   },
   {
     "label": "Womens Fashion",
-    "href": "/womens-fashion",
+    "href": "womens-fashion",
     "icon": "https://i.postimg.cc/7P3vJYy4/women-120x120.jpg",
     "subcategories": [
       {
-        "label": "Dresses",
-        "href": "/womens-fashion/dresses",
-        "icon": "fas fa-female"
+        "label": "dresses",
+        "href": "/womens-fashion/dresses"
       },
       {
-        "label": "Jewelry",
-        "href": "/womens-fashion/jewelry",
-        "icon": "fas fa-gem"
+        "label": "jewelry",
+        "href": "/womens-fashion/jewelry"
       },
       {
-        "label": "Handbags",
-        "href": "/womens-fashion/handbags",
-        "icon": "fas fa-handbag"
+        "label": "handbags",
+        "href": "/womens-fashion/handbags"
       },
       {
-        "label": "Shoes",
-        "href": "/womens-fashion/shoes",
-        "icon": "fas fa-high-heel"
-      }
-    ]
-  },
-
-  {
-    "label": "Watch",
-    "href": "/watch",
-    "icon": "https://i.postimg.cc/bvDWyqRK/download.png",
-    "subcategories": [
-      {
-        "label": "Men's Watches",
-        "href": "/watch/mens-watches",
-        "icon": "fas fa-clock"
-      },
-      {
-        "label": "Women's Watches",
-        "href": "/watch/womens-watches",
-        "icon": "fas fa-clock"
-      },
-      {
-        "label": "Smartwatches",
-        "href": "/watch/smartwatches",
-        "icon": "fas fa-watch"
-      },
-      {
-        "label": "Luxury Watches",
-        "href": "/watch/luxury-watches",
-        "icon": "fas fa-gem"
-      }
-    ]
-  },
-
-  {
-    "label": "Ladies Bag",
-    "href": "/ladies-bag",
-    "icon": "https://i.postimg.cc/KY6V4Cq4/Bags-120x120.png",
-    "subcategories": [
-      {
-        "label": "Tote Bags",
-        "href": "/ladies-bag/tote-bags",
-        "icon": "fas fa-shopping-bag"
-      },
-      {
-        "label": "Clutches",
-        "href": "/ladies-bag/clutches",
-        "icon": "fas fa-clutch"
-      },
-      {
-        "label": "Backpacks",
-        "href": "/ladies-bag/backpacks",
-        "icon": "fas fa-backpack"
-      }
-    ]
-  },
-  {
-    "label": "Shoes",
-    "href": "/shoes",
-    "icon": "https://i.postimg.cc/vmrZ1Y7P/Shoes-120x120.jpg",
-    "subcategories": [
-      {
-        "label": "Sneakers",
-        "href": "/shoes/sneakers",
-        "icon": "fas fa-running"
-      },
-      {
-        "label": "Boots",
-        "href": "/shoes/boots",
-        "icon": "fas fa-boot"
-      },
-      {
-        "label": "Sandals",
-        "href": "/shoes/sandals",
-        "icon": "fas fa-slippers"
-      },
-      {
-        "label": "Formal Shoes",
-        "href": "/shoes/formal-shoes",
-        "icon": "fas fa-shoe-prints"
-      },
-      {
-        "label": "Sports Shoes",
-        "href": "/shoes/sports-shoes",
-        "icon": "fas fa-shoe-track"
-      }
-    ]
-  },
-  {
-    "label": "Jewellery",
-    "href": "/jewellery",
-    "icon": "https://i.postimg.cc/g0srScwx/Jewellery-120x120.jpg",
-    "subcategories": [
-      {
-        "label": "Necklaces",
-        "href": "/jewellery/necklaces",
-        "icon": "fas fa-gem"
-      },
-      {
-        "label": "Earrings",
-        "href": "/jewellery/earrings",
-        "icon": "fas fa-ear"
-      },
-      {
-        "label": "Bracelets",
-        "href": "/jewellery/bracelets",
-        "icon": "fas fa-link"
-      },
-      {
-        "label": "Rings",
-        "href": "/jewellery/rings",
-        "icon": "fas fa-ring"
-      },
-      {
-        "label": "Anklets",
-        "href": "/jewellery/anklets",
-        "icon": "fas fa-foot"
-      },
-      {
-        "label": "Brooches",
-        "href": "/jewellery/brooches",
-        "icon": "fas fa-bow"
-      }
-    ]
-  },
-  {
-    "label": "Accessories",
-    "href": "/accessories",
-    "icon": "https://i.postimg.cc/25Nzf1bH/Accessories-120x120.jpg",
-    "subcategories": [
-      {
-        "label": "Watches",
-        "href": "/accessories/watches",
-        "icon": "fas fa-watch"
-      },
-      {
-        "label": "Belts",
-        "href": "/accessories/belts",
-        "icon": "fas fa-belt"
-      },
-      {
-        "label": "Hats",
-        "href": "/accessories/hats",
-        "icon": "fas fa-hat-cowboy"
-      },
-      {
-        "label": "Sunglasses",
-        "href": "/accessories/sunglasses",
-        "icon": "fas fa-glasses"
-      },
-      {
-        "label": "Scarves",
-        "href": "/accessories/scarves",
-        "icon": "fas fa-scarf"
-      },
-      {
-        "label": "Gloves",
-        "href": "/accessories/gloves",
-        "icon": "fas fa-hand-sparkles"
-      },
-      {
-        "label": "Wallets",
-        "href": "/accessories/wallets",
-        "icon": "fas fa-wallet"
+        "label": "shoes",
+        "href": "/womens-fashion/shoes"
       }
     ]
   }
