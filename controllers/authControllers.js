@@ -42,7 +42,8 @@ const authSignup = async (req, res) => {
 
     res.status(201).json({ message: "User registered successfully" });
   } catch (error) {
-    console.log(error);
+    console.error("Error logging in:", error);
+    res.status(500).json({ message: "Internal Server Error" });
   }
 };
 module.exports = { authLogin, authSignup };
