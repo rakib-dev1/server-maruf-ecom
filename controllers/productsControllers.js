@@ -1,12 +1,71 @@
+const multer = require("multer");
 const { db } = require("../config/db");
+const ImageKit = require("imagekit");
+
+
+const imagekit = new ImageKit({
+  publicKey: process.env.IMAGEKIT_PUBLIC_KEY,
+  privateKey: process.env.IMAGEKIT_PRIVATE_KEY,
+  urlEndpoint: process.env.IMAGEKIT_URL_ENDPOINT,
+});
+
+const addNewProducts = async (req, res) => {
+  try {
+    const {
+      title,
+      description,
+      sizes,
+      tags,
+      price,
+      stock,
+      discount,
+      categories,
+      subcategories,
+    } = req.body;
+    console.log(req.body);
+    const files = req.files;
+    if (!files || files.length === 0) {
+      return res.status(400).json({ error: "No files uploaded" });
+    }
+    let imageUrls = [];
+    for (const file of files) {
+      const uploadedImage = await imagekit.upload({
+        file: file.buffer.toString("base64"),
+        fileName: file.originalname,
+      });
+      imageUrls.push(uploadedImage.url);
+    }
+
+    console.log(imageUrls);
+    const product = {
+      title,
+      description,
+      sizes,
+      tags,
+      price,
+      stock,
+      discount,
+      category: {
+        label: categories,
+        subcategory: { label: subcategories },
+      },
+      images: imageUrls,
+    };
+    const result = await db.collection("products").insertOne(product);
+
+    res.status(201).json({ message: "Product added successfully", result });
+  } catch (error) {
+    console.error("Error adding products:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
 
 const getProducts = async (req, res) => {
   try {
-    const { category, subcategory } = req.query; // Added 'title' to the query parameters
+    const { category, subcategory } = req.query;
     let filter = {};
-    console.log(category, subcategory); // Added title for logging
+    console.log(category, subcategory);
 
-    // Check for category and subcategory
     if (category) {
       filter["category.label"] = { $regex: new RegExp(category, "i") };
     }
@@ -15,13 +74,8 @@ const getProducts = async (req, res) => {
         $regex: new RegExp(subcategory, "i"),
       };
     }
-
-    // Check for title
-
-    // Fetch the products based on the filter
     const products = await db.collection("products").find(filter).toArray();
 
-    // Send the found products as the response
     res.json(products);
   } catch (error) {
     console.error("Error fetching products:", error);
@@ -71,4 +125,9 @@ const getFeaturedProducts = async (req, res) => {
   }
 };
 
-module.exports = { getProducts, getFeaturedProducts, getHighLights };
+module.exports = {
+  getProducts,
+  getFeaturedProducts,
+  getHighLights,
+  addNewProducts,
+};
