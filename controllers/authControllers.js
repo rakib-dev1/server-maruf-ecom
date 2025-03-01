@@ -6,25 +6,40 @@ const bcrypt = require("bcryptjs");
 const authLogin = async (req, res) => {
   try {
     const { email, password } = req.body;
+
+    // Check if the user exists in the database
     const user = await db.collection("users").findOne({ email });
+
     if (!user) {
-      return res.status(401).json({ message: "Invalid email" });
+      return res.status(400).json({ message: "Invalid email or password" });
     }
-    const isMatch = await bcrypt.compare(password, user.password);
-    if (!isMatch) {
-      return res.status(401).json({ message: "Invalid credentials" });
+
+    // Compare the password with the hashed password in the database
+    const isPasswordMatch = await bcrypt.compare(password, user.password);
+    if (!isPasswordMatch) {
+      return res.status(400).json({ message: "Invalid email or password" });
     }
+
+    // Create a JWT token with the user's details
     const token = jwt.sign(
-      { id: user._id, email: user.email },
-      process.env.JWT_SECRET,
-      {
-        expiresIn: "1h",
-      }
+      { id: user._id, email: user.email, name: user.name },
+      process.env.JWT_SECRET_KEY,
+      { expiresIn: "1h" }
     );
-    res.json({ id: user.id, name: user.email, token });
-  } catch (error) {
-    console.error("Error logging in:", error);
-    res.status(500).json({ message: "Internal Server Error" });
+
+    // Return the user object and token
+    res.json({
+      message: "Login successful",
+      user: {
+        id: user._id,
+        email: user.email,
+        name: user.name,
+      },
+      token, // Send token to the user
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Server error" });
   }
 };
 
