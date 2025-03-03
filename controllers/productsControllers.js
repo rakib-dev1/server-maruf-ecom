@@ -35,10 +35,12 @@ const addNewProducts = async (req, res) => {
       imageUrls.push(uploadedImage.url);
     }
     const randomNumber = Math.floor(1000 + Math.random() * 9000); // Generate a random 4-digit number
-    const optimazeTitle = `${title.toLowerCase().replace(/ /g, "-")}-${randomNumber}`;
+    const optimizeTitle = `${title
+      .toLowerCase()
+      .replace(/ /g, "-")}-${randomNumber}`;
 
     const product = {
-      title: optimazeTitle,
+      title: optimizeTitle,
       description,
       sizes,
       tags,
@@ -63,19 +65,23 @@ const addNewProducts = async (req, res) => {
 
 const getProducts = async (req, res) => {
   try {
-    const { category, subcategory } = req.query;
+    const { title } = req.params;
+    console.log(title);
     let filter = {};
-    console.log(category, subcategory);
 
-    if (category) {
-      filter["category.label"] = { $regex: new RegExp(category, "i") };
+    if (title) {
+      filter = { title: decodeURIComponent(title) }; // Decode title and use it in filter
     }
-    if (subcategory) {
-      filter["category.subcategory.label"] = {
-        $regex: new RegExp(subcategory, "i"),
-      };
+
+    const products = await db
+      .collection("products")
+      .find(filter)
+      .sort({ postedAt: -1 })
+      .toArray();
+
+    if (title && products.length === 0) {
+      return res.status(404).json({ message: "Product not found" });
     }
-    const products = await db.collection("products").find(filter).toArray();
 
     res.json(products);
   } catch (error) {
