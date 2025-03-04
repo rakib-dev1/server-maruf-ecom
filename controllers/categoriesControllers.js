@@ -2,7 +2,7 @@ const { db } = require("../config/db");
 const getCategories = async (req, res) => {
   try {
     const { category } = req.query; // Get category from query params
-    console.log(category);
+ 
     if (category) {
       const categoryData = await db
         .collection("categories")

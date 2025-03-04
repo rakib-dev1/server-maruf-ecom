@@ -34,10 +34,8 @@ const addNewProducts = async (req, res) => {
       });
       imageUrls.push(uploadedImage.url);
     }
-    const randomNumber = Math.floor(1000 + Math.random() * 9000); // Generate a random 4-digit number
-    const optimizeTitle = `${title
-      .toLowerCase()
-      .replace(/ /g, "-")}-${randomNumber}`;
+
+    const optimizeTitle = `${title.toLowerCase().replace(/ /g, "-")}`;
 
     const product = {
       title: optimizeTitle,
@@ -65,24 +63,43 @@ const addNewProducts = async (req, res) => {
 
 const getProducts = async (req, res) => {
   try {
-    const { title } = req.params;
-    console.log(title);
+    const { title } = req.params; // Title search from params
+    const { category, subCategory } = req.query; // Category and subcategory from query
+    console.log(req.query);
+    console.log(subCategory);
+
     let filter = {};
 
+    // If title is provided, search by title
     if (title) {
-      filter = { title: decodeURIComponent(title) }; // Decode title and use it in filter
+      filter.title = decodeURIComponent(title); // Decode title for accurate matching
+    }
+
+    // If category is provided, filter by category label
+    if (category) {
+      filter["category.label"] = decodeURIComponent(category);
+    }
+
+    // If subcategory is provided, filter by subcategory label
+    if (subCategory) {
+      filter["category.subcategory.label"] = decodeURIComponent(subCategory);
+    } else if (category) {
+      // If category is provided but no subcategory, filter only by category
+      filter["category.subcategory.label"] = { $exists: true }; // Optional filter, can be removed if not needed
     }
 
     const products = await db
       .collection("products")
       .find(filter)
-      .sort({ postedAt: -1 })
+      .sort({ postedAt: -1 }) // Sort by the most recent products
       .toArray();
 
-    if (title && products.length === 0) {
+    // If no products found, return 404
+    if ((title || category || subCategory) && products.length === 0) {
       return res.status(404).json({ message: "Product not found" });
     }
 
+    // Return the products found
     res.json(products);
   } catch (error) {
     console.error("Error fetching products:", error);
