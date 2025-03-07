@@ -1,3 +1,4 @@
+const { ObjectId } = require("mongodb");
 const { db } = require("../config/db");
 const addToCart = async (req, res) => {
   try {
@@ -21,16 +22,27 @@ const addToCart = async (req, res) => {
 };
 
 const getCartItems = async (req, res) => {
-    try {
-        const email = req.query.email;
-        const query = { email: email };
-        const cartItems = await db.collection("cart").find(query).toArray();
-        res.send(cartItems);
-    } catch (error) {
-        console.error("Error fetching products:", error);
-        res.status(500).json({ message: "Internal Server Error" });
-    }
-}
+  try {
+    const email = req.query.email;
+    const query = { email: email };
+    const cartItems = await db.collection("cart").find(query).toArray();
+    res.send(cartItems);
+  } catch (error) {
+    console.error("Error fetching products:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
+const removeCartItems = async (req, res) => {
+  try {
+    const id = req.query.item;
+    console.log(id);
+    const query = { _id: new ObjectId(id) };
+    const cartItems = await db.collection("cart").deleteOne(query);
+    res.send(cartItems);
+  } catch (error) {
+    console.error("Error fetching products:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
 
-
-module.exports = { addToCart,getCartItems };
+module.exports = { addToCart, getCartItems, removeCartItems };

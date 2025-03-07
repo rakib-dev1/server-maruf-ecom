@@ -14,7 +14,7 @@ const {
 const { authLogin, authSignup } = require("../controllers/authControllers");
 const multer = require("multer");
 const protect = require("../middlewares/authMiddleware");
-const { addToCart, getCartItems } = require("../controllers/userControllers");
+const { addToCart, getCartItems, removeCartItems } = require("../controllers/userControllers");
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 const route = express.Router();
@@ -36,5 +36,8 @@ route.post("/categories", addNewCategory);
 //auth route
 route.post("/auth/login", authLogin);
 route.post("/auth/signup", authSignup);
+
+// delete route
+route.delete("/cart", removeCartItems);
 
 module.exports = route;
