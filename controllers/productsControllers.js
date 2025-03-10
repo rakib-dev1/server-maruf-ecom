@@ -39,7 +39,10 @@ const addNewProducts = async (req, res) => {
       .toLowerCase()
       .replace(/[,./']/g, "")
       .replace(/\s+/g, "-")}`;
-    const tagsArray = tags.split(",").map((tag) => tag.trim());
+    const tagsArray = tags
+      .split(",")
+      .map((tag) => tag.trim().toLowerCase())
+      .filter((tag) => tag !== "");
     // const optimizeTitle = `${title.toLowerCase().replace(/ /g, "-")}`;
     if (imageUrls) {
       const product = {
@@ -153,21 +156,35 @@ const testApi = (req, res) => {
 
 const tags = async (req, res) => {
   try {
-    const { tags } = req.query;
+    let { tags } = req.query;
+    console.log(tags);
+
     if (!tags || !Array.isArray(tags) || tags.length < 2) {
       return res
         .status(400)
         .json({ message: "Please provide at least two tags." });
     }
+
+    // Convert tags to lowercase for case-insensitive matching
+    tags = tags.map((tag) => tag.toLowerCase());
+
     const products = await db
       .collection("products")
-      .find({ tags: { $in: tags } })
+      .find({
+        tags: {
+          $in: tags.map((tag) => new RegExp(`^${tag}$`, "i")), // Case-insensitive regex
+        },
+      })
       .toArray();
-    // Filter products that have at least two matching tags
+
+    // Filter products that have at least two matching tags (case insensitive)
     const filteredProducts = products.filter((product) => {
-      const matchedTags = product.tags.filter((tag) => tags.includes(tag));
-      return matchedTags.length >= 2;
+      const matchedTags = product.tags.filter((tag) =>
+        tags.includes(tag.toLowerCase())
+      );
+      return matchedTags.length >= 1;
     });
+
     res.send(filteredProducts);
   } catch (error) {
     console.error("Error fetching tags:", error);
