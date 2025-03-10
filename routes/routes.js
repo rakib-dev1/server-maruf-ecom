@@ -5,6 +5,7 @@ const {
   getHighLights,
   addNewProducts,
   testApi,
+  tags,
 } = require("../controllers/productsControllers");
 const {
   getCategories,
@@ -28,6 +29,7 @@ route.get("/featured-products", getFeaturedProducts);
 route.get("/highlights", getHighLights);
 route.get("/test", protect, testApi);
 route.get("/cart", getCartItems);
+route.get("/tags", tags);
 // post route
 route.post("/add-products", upload.array("images", 10), addNewProducts);
 route.post("/cart", addToCart);

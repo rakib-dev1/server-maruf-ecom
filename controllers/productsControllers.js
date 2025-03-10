@@ -32,29 +32,36 @@ const addNewProducts = async (req, res) => {
         file: file.buffer.toString("base64"),
         fileName: file.originalname,
       });
+
       imageUrls.push(uploadedImage.url);
     }
-
-    const optimizeTitle = `${title.toLowerCase().replace(/ /g, "-")}`;
-
-    const product = {
-      title: optimizeTitle,
-      description,
-      sizes,
-      tags,
-      postedAt: new Date(),
-      price: parseFloat(price),
-      stock: parseInt(stock),
-      discount: parseInt(discount),
-      category: {
-        label: categories,
-        subcategory: { label: subcategories },
-      },
-      images: imageUrls,
-    };
-    console.log(product);
-    const result = await db.collection("products").insertOne(product);
-    res.status(201).json({ message: "Product added successfully", result });
+    const formattedTitle = `${title
+      .toLowerCase()
+      .replace(/[,./']/g, "")
+      .replace(/\s+/g, "-")}`;
+    const tagsArray = tags.split(",").map((tag) => tag.trim());
+    // const optimizeTitle = `${title.toLowerCase().replace(/ /g, "-")}`;
+    if (imageUrls) {
+      const product = {
+        title: formattedTitle,
+        description,
+        sizes,
+        tags: tagsArray,
+        postedAt: new Date(),
+        price: parseFloat(price),
+        stock: parseInt(stock),
+        discount: parseInt(discount),
+        category: {
+          label: categories,
+          subcategory: { label: subcategories },
+        },
+        images: imageUrls,
+      };
+      const result = await db.collection("products").insertOne(product);
+      res.status(201).json({ message: "Product added successfully", result });
+    } else {
+      res.status(400).json({ message: "Image not uploaded" });
+    }
   } catch (error) {
     console.error("Error adding products:", error);
     res.status(500).json({ message: "Internal Server Error" });
@@ -69,18 +76,12 @@ const getProducts = async (req, res) => {
     console.log(subCategory);
 
     let filter = {};
-
-    // If title is provided, search by title
     if (title) {
       filter.title = decodeURIComponent(title); // Decode title for accurate matching
     }
-
-    // If category is provided, filter by category label
     if (category) {
       filter["category.label"] = decodeURIComponent(category);
     }
-
-    // If subcategory is provided, filter by subcategory label
     if (subCategory) {
       filter["category.subcategory.label"] = decodeURIComponent(subCategory);
     } else if (category) {
@@ -94,12 +95,9 @@ const getProducts = async (req, res) => {
       .sort({ postedAt: -1 }) // Sort by the most recent products
       .toArray();
 
-    // If no products found, return 404
     if ((title || category || subCategory) && products.length === 0) {
       return res.status(404).json({ message: "Product not found" });
     }
-
-    // Return the products found
     res.json(products);
   } catch (error) {
     console.error("Error fetching products:", error);
@@ -153,10 +151,35 @@ const testApi = (req, res) => {
   res.send("API is working");
 };
 
+const tags = async (req, res) => {
+  try {
+    const { tags } = req.query;
+    if (!tags || !Array.isArray(tags) || tags.length < 2) {
+      return res
+        .status(400)
+        .json({ message: "Please provide at least two tags." });
+    }
+    const products = await db
+      .collection("products")
+      .find({ tags: { $in: tags } })
+      .toArray();
+    // Filter products that have at least two matching tags
+    const filteredProducts = products.filter((product) => {
+      const matchedTags = product.tags.filter((tag) => tags.includes(tag));
+      return matchedTags.length >= 2;
+    });
+    res.send(filteredProducts);
+  } catch (error) {
+    console.error("Error fetching tags:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
+
 module.exports = {
   getProducts,
   getFeaturedProducts,
   getHighLights,
   addNewProducts,
   testApi,
+  tags,
 };
