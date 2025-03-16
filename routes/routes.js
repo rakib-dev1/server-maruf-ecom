@@ -12,10 +12,15 @@ const {
   addNewCategory,
 } = require("../controllers/categoriesControllers");
 
-const { authLogin, authSignup } = require("../controllers/authControllers");
+const { authLogin, authSignup, sessionUser } = require("../controllers/authControllers");
 const multer = require("multer");
 const protect = require("../middlewares/authMiddleware");
-const { addToCart, getCartItems, removeCartItems } = require("../controllers/userControllers");
+const {
+  addToCart,
+  getCartItems,
+  removeCartItems,
+  orderConfirmItems,
+} = require("../controllers/userControllers");
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 const route = express.Router();
@@ -34,10 +39,12 @@ route.get("/tags", tags);
 route.post("/add-products", upload.array("images", 10), addNewProducts);
 route.post("/cart", addToCart);
 route.post("/categories", addNewCategory);
+route.post("/order", orderConfirmItems);
 
 //auth route
 route.post("/auth/login", authLogin);
 route.post("/auth/signup", authSignup);
+route.post("/auth/session",sessionUser);
 
 // delete route
 route.delete("/cart", removeCartItems);

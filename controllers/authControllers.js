@@ -8,10 +8,10 @@ const authLogin = async (req, res) => {
     const { email, password } = req.body;
 
     // Check if the user exists in the database
-    const user = await db.collection("users").findOne({ email });
+    const user = await db.collection("users").findOne({ email: email });
 
     if (!user) {
-      return res.status(400).json({ message: "Invalid email or password" });
+      return res.status(400).json({ message: "user not found" });
     }
 
     // Compare the password with the hashed password in the database
@@ -46,7 +46,7 @@ const authLogin = async (req, res) => {
 const authSignup = async (req, res) => {
   try {
     const { email, password } = req.body;
-    const existingUser = await db.collection("users").findOne({ email });
+    const existingUser = await db.collection("users").findOne({ email: email });
     if (existingUser) {
       return res.status(400).json({ message: "Email already exists" });
     }
@@ -57,14 +57,32 @@ const authSignup = async (req, res) => {
       password: hashedPassword,
       createdAt: new Date(),
     };
-    // Insert user into MongoDB
     await db.collection("users").insertOne(user);
-
-    res.status(201).json({ message: "User registered successfully" });
+    res.status(200).json({ message: "User created successfully" });
   } catch (error) {
     console.error("Error logging in:", error);
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
-
-module.exports = { authLogin, authSignup };
+const sessionUser = async (req, res) => {
+  try {
+    const { email, name } = req.body;
+    console.log(req.body);
+    const existingUser = await db.collection("users").findOne({ email: email });
+    if (existingUser) {
+      return res.status(400).json({ message: "Email already exists" });
+    }
+    const user = {
+      email: email,
+      name: name,
+      createdAt: new Date(),
+    };
+    const result = await db.collection("users").insertOne(user);
+    console.log(result);
+    res.send(result);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Server error" });
+  }
+};
+module.exports = { authLogin, authSignup, sessionUser };
