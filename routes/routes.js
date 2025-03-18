@@ -5,14 +5,19 @@ const {
   getHighLights,
   addNewProducts,
   testApi,
-  tags,
+
+  searchTags,
 } = require("../controllers/productsControllers");
 const {
   getCategories,
   addNewCategory,
 } = require("../controllers/categoriesControllers");
 
-const { authLogin, authSignup, sessionUser } = require("../controllers/authControllers");
+const {
+  authLogin,
+  authSignup,
+  sessionUser,
+} = require("../controllers/authControllers");
 const multer = require("multer");
 const protect = require("../middlewares/authMiddleware");
 const {
@@ -34,7 +39,8 @@ route.get("/featured-products", getFeaturedProducts);
 route.get("/highlights", getHighLights);
 route.get("/test", protect, testApi);
 route.get("/cart", getCartItems);
-route.get("/tags", tags);
+
+route.get("/search", searchTags);
 // post route
 route.post("/add-products", upload.array("images", 10), addNewProducts);
 route.post("/cart", addToCart);
@@ -44,7 +50,7 @@ route.post("/order", orderConfirmItems);
 //auth route
 route.post("/auth/login", authLogin);
 route.post("/auth/signup", authSignup);
-route.post("/auth/session",sessionUser);
+route.post("/auth/session", sessionUser);
 
 // delete route
 route.delete("/cart", removeCartItems);

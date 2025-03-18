@@ -1,0 +1,37 @@
+[
+  {
+    "tags": ["electronics", "mobile"],
+    "name": "Smartphone",
+    "title": "SuperFast Pro 5G Smartphone",
+    "price": 799.99,
+    "rating": 4.5
+  },
+  {
+    "tags": ["home-appliance", "man tshirt", "air-quality"],
+    "name": "Air Purifier",
+    "title": "CleanAir Ultra HEPA Air Purifier",
+    "price": 199.99,
+    "rating": 4.7
+  },
+  {
+    "tags": ["man fashion", "outerwear"],
+    "name": "Leather Jacket",
+    "title": "Classic Brown Leather Jacket",
+    "price": 149.99,
+    "rating": 4.3
+  },
+  {
+    "tags": ["beauty", "skincare", "man sports"],
+    "name": "Face Cream",
+    "title": "Radiant Glow Anti-Aging Cream",
+    "price": 59.99,
+    "rating": 4.8
+  },
+  {
+    "tags": ["sports", "man footwear"],
+    "name": "Running Shoes",
+    "title": "SpeedX Pro Running Shoes",
+    "price": 120.0,
+    "rating": 4.6
+  }
+]

@@ -2,6 +2,7 @@ const multer = require("multer");
 const { db } = require("../config/db");
 const ImageKit = require("imagekit");
 const { post } = require("../routes/routes");
+const fakeProducts = require("../data/fakeproducts.json");
 
 const imagekit = new ImageKit({
   publicKey: process.env.IMAGEKIT_PUBLIC_KEY,
@@ -154,40 +155,56 @@ const testApi = (req, res) => {
   res.send("API is working");
 };
 
-const tags = async (req, res) => {
+const searchTags = async (req, res) => {
   try {
-    let { tags } = req.query;
-    console.log(tags);
+    const { query } = req.query;
+    console.log(query);
 
-    if (!tags || !Array.isArray(tags) || tags.length < 2) {
-      return res
-        .status(400)
-        .json({ message: "Please provide at least two tags." });
+    if (!query) {
+      return res.status(400).json({ message: "Query parameter is required" });
     }
 
-    // Convert tags to lowercase for case-insensitive matching
-    tags = tags.map((tag) => tag.toLowerCase());
-
-    const products = await db
+    // Find products where tags contain the query (case-insensitive search)
+    const searchResults = await db
       .collection("products")
       .find({
-        tags: {
-          $in: tags.map((tag) => new RegExp(`^${tag}$`, "i")), // Case-insensitive regex
-        },
+        tags: { $elemMatch: { $regex: query, $options: "i" } }, // Case-insensitive regex search on tags
       })
       .toArray();
 
-    // Filter products that have at least two matching tags (case insensitive)
-    const filteredProducts = products.filter((product) => {
-      const matchedTags = product.tags.filter((tag) =>
-        tags.includes(tag.toLowerCase())
-      );
-      return matchedTags.length >= 1;
+    if (searchResults.length === 0) {
+      return res.status(404).json({ message: "No products found" });
+    }
+
+    // Extract matching tag names
+    const matchingTags = [];
+
+    // Loop through products and collect matching tags
+    searchResults.forEach((product) => {
+      product.tags.forEach((tag) => {
+        if (tag.toLowerCase().includes(query.toLowerCase())) {
+          matchingTags.push(tag); // Add the tag to the array
+        }
+      });
     });
 
-    res.send(filteredProducts);
+    // Sort matching tags based on the first occurrence of the query and then alphabetically
+    matchingTags.sort((a, b) => {
+      const aIndex = a.toLowerCase().indexOf(query.toLowerCase());
+      const bIndex = b.toLowerCase().indexOf(query.toLowerCase());
+
+      // First compare by the index of the match
+      if (aIndex === bIndex) {
+        // If both match at the same position, then sort alphabetically
+        return a.localeCompare(b);
+      }
+      return aIndex - bIndex; // Ascending order based on the first match
+    });
+
+    // Return the sorted matching tags
+    res.json({ matchingTags });
   } catch (error) {
-    console.error("Error fetching tags:", error);
+    console.error("Error searching products:", error);
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
@@ -198,5 +215,5 @@ module.exports = {
   getHighLights,
   addNewProducts,
   testApi,
-  tags,
+  searchTags,
 };
