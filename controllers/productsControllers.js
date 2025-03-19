@@ -1,8 +1,5 @@
-const multer = require("multer");
 const { db } = require("../config/db");
 const ImageKit = require("imagekit");
-const { post } = require("../routes/routes");
-const fakeProducts = require("../data/fakeproducts.json");
 
 const imagekit = new ImageKit({
   publicKey: process.env.IMAGEKIT_PUBLIC_KEY,
@@ -76,7 +73,7 @@ const getProducts = async (req, res) => {
   try {
     const { title } = req.params; // Title search from params
     const { category, subCategory } = req.query; // Category and subcategory from query
-    console.log(req.query);
+    console.log("getProducts", req.query);
     console.log(subCategory);
 
     let filter = {};
@@ -151,10 +148,7 @@ const getFeaturedProducts = async (req, res) => {
   }
 };
 
-const testApi = (req, res) => {
-  res.send("API is working");
-};
-
+//search tag api
 const searchTags = async (req, res) => {
   try {
     const { query } = req.query;
@@ -168,7 +162,7 @@ const searchTags = async (req, res) => {
     const searchResults = await db
       .collection("products")
       .find({
-        tags: { $elemMatch: { $regex: query, $options: "i" } }, // Case-insensitive regex search on tags
+        tags: { $elemMatch: { $regex: query, $options: "i" } },
       })
       .toArray();
 
@@ -188,8 +182,11 @@ const searchTags = async (req, res) => {
       });
     });
 
-    // Sort matching tags based on the first occurrence of the query and then alphabetically
-    matchingTags.sort((a, b) => {
+    // Remove duplicates by converting the array to a Set
+    const uniqueTags = [...new Set(matchingTags)];
+
+    // Sort unique tags based on the first occurrence of the query and then alphabetically
+    uniqueTags.sort((a, b) => {
       const aIndex = a.toLowerCase().indexOf(query.toLowerCase());
       const bIndex = b.toLowerCase().indexOf(query.toLowerCase());
 
@@ -201,10 +198,33 @@ const searchTags = async (req, res) => {
       return aIndex - bIndex; // Ascending order based on the first match
     });
 
-    // Return the sorted matching tags
-    res.json({ matchingTags });
+    // Return the sorted unique matching tags
+    res.json({ matchingTags: uniqueTags });
   } catch (error) {
     console.error("Error searching products:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
+// recommended products api
+
+const getRecommendedProducts = async (req, res) => {
+  try {
+    const { tags } = req.query;
+    const tagsArray = tags?.split(",");
+    const products = await db
+      .collection("products")
+      .find({
+        tags: { $in: tagsArray },
+      })
+      .toArray();
+    if (products?.length === 0) {
+      return res
+        .status(404)
+        .json({ message: "No products found matching the tags" });
+    }
+    res.json(products);
+  } catch (error) {
+    console.error("Error fetching recommended products:", error);
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
@@ -214,6 +234,6 @@ module.exports = {
   getFeaturedProducts,
   getHighLights,
   addNewProducts,
-  testApi,
   searchTags,
+  getRecommendedProducts,
 };
