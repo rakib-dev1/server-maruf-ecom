@@ -70,39 +70,44 @@ const addNewProducts = async (req, res) => {
 };
 
 const getProducts = async (req, res) => {
+  //! single product api working api?title=Shoe
+  //! tags query api working api?tags=Shoe For Women,red
+  //! category and subcategory api working api?category=shoes&subcategory=sneakers
+  //! only category api working api?category=shoes
+
   try {
-    const { title } = req.params; // Title search from params
-    const { category, subCategory } = req.query; // Category and subcategory from query
-    console.log("getProducts", req.query);
-    console.log(subCategory);
+    const { title } = req.params;
+    const { tags, category, subcategory } = req.query;
+    console.log(title, tags, category, subcategory);
 
     let filter = {};
+
     if (title) {
-      filter.title = decodeURIComponent(title); // Decode title for accurate matching
+      filter.title = title;
     }
+
+    if (tags) {
+      const tagsArray = tags.split(",").map((tag) => tag.trim());
+      filter.$or = tagsArray.map((tag) => ({
+        tags: { $regex: new RegExp(`^${tag}$`, "i") }, // Case-insensitive match
+      }));
+    }
+
     if (category) {
-      filter["category.label"] = decodeURIComponent(category);
-    }
-    if (subCategory) {
-      filter["category.subcategory.label"] = decodeURIComponent(subCategory);
-    } else if (category) {
-      // If category is provided but no subcategory, filter only by category
-      filter["category.subcategory.label"] = { $exists: true }; // Optional filter, can be removed if not needed
+      filter["category.label"] = category;
     }
 
-    const products = await db
-      .collection("products")
-      .find(filter)
-      .sort({ postedAt: -1 }) // Sort by the most recent products
-      .toArray();
-
-    if ((title || category || subCategory) && products.length === 0) {
-      return res.status(404).json({ message: "Product not found" });
+    if (subcategory) {
+      filter["category.subcategory.label"] = subcategory;
     }
-    res.json(products);
+
+    const products = await db.collection("products").find(filter).toArray();
+
+    res.status(200).json({ success: true, data: products });
   } catch (error) {
-    console.error("Error fetching products:", error);
-    res.status(500).json({ message: "Internal Server Error" });
+    res
+      .status(500)
+      .json({ success: false, message: "Server Error", error: error.message });
   }
 };
 
