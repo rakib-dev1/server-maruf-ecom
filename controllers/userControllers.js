@@ -5,15 +5,16 @@ const addToCart = async (req, res) => {
     if (!req.body.email) {
       return res.status(400).json({ message: "Email is required" });
     }
-    const { title, price, image, email, quantity } = req.body;
-    console.log(req.body);
+    const { title, price, images, email, quantity } = req.body;
+    console.log(req.body.images);
 
     const cartItems = {
       title,
       price,
       quantity,
-      image,
+      images,
       email,
+      addedDate: new Date(),
     };
     const result = await db.collection("cart").insertOne(cartItems);
     res.send(result);
@@ -50,22 +51,20 @@ const removeCartItems = async (req, res) => {
 const orderConfirmItems = async (req, res) => {
   try {
     const {
-      userInfo,
+      customerInfo,
       paymentMethod,
-      itemQuantities,
       totalPrice,
-      cart,
-      deliveryFee,
+      deliveryCharge,
+      products,
     } = req.body;
-
+    console.log(req.body);
     const orderItems = {
-      userInfo: userInfo,
-      totalPrice,
-      cart,
-      status: "pending",
-      itemQuantities,
-      deliveryFee,
+      customerInfo,
       paymentMethod,
+      totalPrice,
+      products,
+      deliveryCharge,
+      status: "pending",
       orderDate: new Date(),
     };
     console.log(orderItems);
@@ -77,9 +76,23 @@ const orderConfirmItems = async (req, res) => {
   }
 };
 
+const getOrders = async (req, res) => {
+  try {
+    const email = req.query.email;
+    console.log(req.query);
+    const query = { "customerInfo.email": email };
+    const orders = await db.collection("orders").find(query).toArray();
+    res.send(orders);
+  } catch (error) {
+    console.error("Error fetching products:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
+
 module.exports = {
   addToCart,
   getCartItems,
   removeCartItems,
   orderConfirmItems,
+  getOrders,
 };

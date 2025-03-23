@@ -114,18 +114,8 @@ const addNewProducts = async (req, res) => {
 const getProducts = async (req, res) => {
   try {
     const { title } = req.params;
-    const { tags, category, subcategory, minPrice, maxPrice, rating, color } =
-      req.query;
-    console.log(
-      title,
-      tags,
-      category,
-      subcategory,
-      minPrice,
-      maxPrice,
-      rating,
-      color
-    );
+    const { tags, category, subcategory, maxPrice, rating, color } = req.query;
+    console.log(title, tags, category, subcategory, maxPrice, rating, color);
     console.log(req.query);
     let filter = {};
 
@@ -149,8 +139,8 @@ const getProducts = async (req, res) => {
     }
 
     // Price Range Filter
-    if (minPrice && maxPrice) {
-      filter.price = { $gte: parseFloat(minPrice), $lte: parseFloat(maxPrice) };
+    if (maxPrice) {
+      filter.price = { $lte: parseFloat(maxPrice) };
     }
 
     // Rating Filter

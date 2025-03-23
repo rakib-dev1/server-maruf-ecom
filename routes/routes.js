@@ -24,6 +24,7 @@ const {
   getCartItems,
   removeCartItems,
   orderConfirmItems,
+  getOrders,
 } = require("../controllers/userControllers");
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
@@ -39,6 +40,7 @@ route.get("/highlights", getHighLights);
 route.get("/cart", getCartItems);
 route.get("/search", searchTags);
 route.get("/recommend", getRecommendedProducts);
+route.get("/orders", getOrders);
 // post route
 route.post("/add-products", upload.array("images", 10), addNewProducts);
 route.post("/cart", addToCart);
