@@ -69,17 +69,64 @@ const addNewProducts = async (req, res) => {
   }
 };
 
-const getProducts = async (req, res) => {
-  //! single product api working api?title=Shoe
-  //! tags query api working api?tags=Shoe For Women,red
-  //! category and subcategory api working api?category=shoes&subcategory=sneakers
-  //! only category api working api?category=shoes
+// const getProducts = async (req, res) => {
+//   //! single product api working api?title=Shoe
+//   //! tags query api working api?tags=Shoe For Women,red
+//   //! category and subcategory api working api?category=shoes&subcategory=sneakers
+//   //! only category api working api?category=shoes
 
+//   try {
+//     const { title } = req.params;
+//     const { tags, category, subcategory } = req.query;
+//     console.log(title, tags, category, subcategory);
+
+//     let filter = {};
+
+//     if (title) {
+//       filter.title = title;
+//     }
+
+//     if (tags) {
+//       const tagsArray = tags.split(",").map((tag) => tag.trim());
+//       filter.$or = tagsArray.map((tag) => ({
+//         tags: { $regex: new RegExp(`^${tag}$`, "i") }, // Case-insensitive match
+//       }));
+//     }
+
+//     if (category) {
+//       filter["category.href"] = category;
+//     }
+
+//     if (subcategory) {
+//       filter["category.subcategory.label"] = subcategory;
+//     }
+
+//     const products = await db.collection("products").find(filter).toArray();
+
+//     res.status(200).json({ success: true, data: products });
+//   } catch (error) {
+//     res
+//       .status(500)
+//       .json({ success: false, message: "Server Error", error: error.message });
+//   }
+// };
+
+const getProducts = async (req, res) => {
   try {
     const { title } = req.params;
-    const { tags, category, subcategory } = req.query;
-    console.log(title, tags, category, subcategory);
-
+    const { tags, category, subcategory, minPrice, maxPrice, rating, color } =
+      req.query;
+    console.log(
+      title,
+      tags,
+      category,
+      subcategory,
+      minPrice,
+      maxPrice,
+      rating,
+      color
+    );
+    console.log(req.query);
     let filter = {};
 
     if (title) {
@@ -94,11 +141,26 @@ const getProducts = async (req, res) => {
     }
 
     if (category) {
-      filter["category.label"] = category;
+      filter["category.href"] = category;
     }
 
     if (subcategory) {
       filter["category.subcategory.label"] = subcategory;
+    }
+
+    // Price Range Filter
+    if (minPrice && maxPrice) {
+      filter.price = { $gte: parseFloat(minPrice), $lte: parseFloat(maxPrice) };
+    }
+
+    // Rating Filter
+    if (rating) {
+      filter.rating = { $gte: parseFloat(rating) }; // Get products with rating >= selected rating
+    }
+
+    // Color Filter
+    if (color && color !== "all") {
+      filter.color = { $regex: new RegExp(`^${color}$`, "i") }; // Case-insensitive color match
     }
 
     const products = await db.collection("products").find(filter).toArray();

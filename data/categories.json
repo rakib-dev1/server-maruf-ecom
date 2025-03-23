@@ -1,5 +1,32 @@
 [
   {
+    "label": "Womens Shopping",
+    "href": "womens-shopping",
+    "icon": "https://i.postimg.cc/7P3vJYy4/women-120x120.jpg",
+    "subcategories": [
+      {
+        "label": "dresses",
+        "href": "/womens-shopping/dresses"
+      },
+      {
+        "label": "jewelry",
+        "href": "/womens-shopping/jewelry"
+      },
+      {
+        "label": "handbags",
+        "href": "/womens-shopping/handbags"
+      },
+      {
+        "label": "shoes",
+        "href": "/womens-shopping/shoes"
+      },
+      {
+        "label": "saree",
+        "href": "/womens-shopping/saree"
+      }
+    ]
+  },
+  {
     "label": "Mens Shopping",
     "href": "mens-shopping",
     "icon": "https://i.postimg.cc/hjmkrKz9/Men-120x120.jpg",
@@ -17,31 +44,12 @@
         "href": "/mens-shopping/shoes"
       },
       {
-        "label": "accessories",
-        "href": "/mens-shopping/accessories"
-      }
-    ]
-  },
-  {
-    "label": "Womens Fashion",
-    "href": "womens-fashion",
-    "icon": "https://i.postimg.cc/7P3vJYy4/women-120x120.jpg",
-    "subcategories": [
-      {
-        "label": "dresses",
-        "href": "/womens-fashion/dresses"
+        "label": "t-shirts",
+        "href": "/mens-shopping/t-shirts"
       },
       {
-        "label": "jewelry",
-        "href": "/womens-fashion/jewelry"
-      },
-      {
-        "label": "handbags",
-        "href": "/womens-fashion/handbags"
-      },
-      {
-        "label": "shoes",
-        "href": "/womens-fashion/shoes"
+        "label": "polo ",
+        "href": "/mens-shopping/polo"
       }
     ]
   }

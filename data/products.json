@@ -1,708 +1,634 @@
 [
   {
-    "title": "Men-Hooded-Navy-Blue-&-Grey-T-Shirt",
-    "price": 200.0,
-    "image": "https://i.postimg.cc/RZ25RCxs/Solid-Men-Hooded-Blue-Grey-T-Shirt.jpg",
-    "tag": "new, sale, offer, discount",
-    "category": [
-      {
-        "label": "Mens Fashion",
-        "href": "/mens-fashion",
-        "subcategory": [
-          {
-            "label": "shirts",
-            "href": "/mens-fashion/shirts"
-          }
-        ]
+    "title": "tangail-tat-trendy-afsan-print-cotton-saree---comfortable-all-season-wear",
+    "description": "Product details of Tangail Tat Trendy Afsan Print Cotton Saree - Comfortable, All-Season Wear\r\nSaree Name: Afsan Print Saree\r\nMaterial : Cotton\r\nSize : 13 Haat\r\nNO Blouse Piece\r\nColor & Design Same as picture\r\nTrendy Saree",
+    "sizes": "[]",
+    "tags": ["SAREE", "Tat", "Comfortable", "Cotton Saree"],
+    "postedAt": "2025-03-10T19:17:43.718Z",
+    "price": 870,
+    "stock": 410,
+    "rating": 4.5,
+    "discount": 12,
+    "category": {
+      "label": "Womens Shopping",
+      "href": "womens-shopping",
+      "subcategory": {
+        "label": "saree",
+        "href": "womens-shopping/saree"
       }
-    ],
-    "highlights": ["100% Cotton", "Regular Fit", "Machine Wash"],
-    "description": "Navy Blue and Grey solid T-shirt, has a hood, and long sleeves",
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/7764dfd8b9a726a7b92c1b81496eb270_Vv3dh5ZHY.jpg"
+    ]
+  },
+  {
+    "title": "premium-quality-long-sleeve-design-shirt-for-mens",
+    "description": "Product details of Premium Quality Long Sleeve Design Shirt For men's\r\nProduct Type : Shirt\r\nColor : Black & White\r\nMain Material : Cotton\r\nGender : Men\r\nWash able Shirt\r\nStylish and fashionable.\r\n𝐅𝐚𝐛𝐫𝐢𝐜:𝐈𝐦𝐩𝐨𝐫𝐭𝐞𝐝 (𝐂𝐨𝐭𝐭𝐨𝐧)\r\n▪️ Material: Cotton\r\n▪️ Quality: 100% Premium\r\n▪️ Colour and Wash: Granted\r\n▪️ Only shirt (No inner T-shirt)\r\n𝐒𝐢𝐳𝐞 𝐃𝐞𝐭𝐚𝐢𝐥𝐬: M, L, XL\r\n\r\nM = Chest 39\", Length 27\"\r\n\r\nL = Chest 41\", Length 28\"\r\n\r\nXL = Chest 43\", Length 29\"",
+    "sizes": "[]",
+    "tags": ["Long Sleeve", "Shirt For men's"],
+    "postedAt": "2025-03-10T18:56:11.008Z",
+    "rating": 4.5,
+    "price": 780,
     "stock": 10,
-    "size": ["S", "M", "L", "XL", "XXL"],
-    "color": ["Navy Blue", "Grey"],
-    "brand": "Roadster",
-    "id": 1,
-    "sku": "MHT001",
-    "createdAt": "2021-06-01T00:00:00.000Z",
-    "updatedAt": "2021-06-01T00:00:00.000Z",
-    "tags": [
-      {
-        "label": "T-Shirt",
-        "href": "/mens-fashion/t-shirt"
-      },
-      {
-        "label": "Hooded",
-        "href": "/mens-fashion/hooded"
-      },
-      {
-        "label": "Roadster",
-        "href": "/mens-fashion/roadster"
+    "discount": 0,
+    "category": {
+      "label": "Mens Shopping",
+      "href": "mens-shopping",
+      "subcategory": {
+        "label": "shirts",
+        "href": "mens-shopping/shirts"
       }
-    ],
-    "review": [
-      {
-        "rating": 4.5,
-        "review": "Good product",
-        "author": "John Doe",
-        "date": "2021-06-01T00:00:00.000Z"
-      }
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/8b02bdd80d29cd5882f2ae612493a796_1sGmUpofP.jpg",
+      "https://ik.imagekit.io/5vsgfneca/034de41177edb5b24aeb44467710a47e_DMkpXZt2D.jpg",
+      "https://ik.imagekit.io/5vsgfneca/746876061161c3b1d707a97848443d4d_EEJbyFBx2.jpg"
     ]
   },
   {
-    "title": "Men's Casual Pants",
-    "price": 1200.0,
-    "image": "https://i.postimg.cc/nrMTYHJw/811h-Y5-ZJd6-S-AC-UL320.jpg",
-    "tag": "sale, offer",
-    "category": [
-      {
-        "label": "men"/mens-fashion"",
-        "href": "/mens-fashion"",
-        "subcategory": [
-          {
-            "label": "pants",
-            "href": "/mens-fashion"/pants"
-          }
-        ]
-      }
-    ],
-    "highlights": ["Comfortable Fit", "Cotton Blend", "Multiple Colors"],
-    "description": "Stylish and comfortable men's casual pants.",
-    "stock": 20,
-    "size": ["S", "M", "L", "XL"],
-    "color": ["Black", "Beige", "Navy"],
-    "brand": "Levi's",
-    "id": 2,
-    "sku": "MCP002",
-    "createdAt": "2021-07-10T00:00:00.000Z",
-    "updatedAt": "2021-07-10T00:00:00.000Z",
-    "review": [
-      {
-        "rating": 4.8,
-        "review": "Excellent quality",
-        "author": "Mark Smith",
-        "date": "2021-07-11T00:00:00.000Z"
-      }
-    ]
-  },
-  {
-    "title": "Women's Summer Dress",
-    "price": 1500.0,
-    "image": "https://i.postimg.cc/brQ0Rd5g/71-B6p-L2cjc-L-AC-UL320.jpg",
-    "tag": "new",
-    "category": [
-      {
-        "label": "womens-fashion",
-        "href": "/womens-fashion",
-        "subcategory": [
-          {
-            "label": "dresses",
-            "href": "/womens-fashion/dresses"
-          }
-        ]
-      }
-    ],
-    "highlights": ["Lightweight", "Floral Print", "Perfect for summer"],
-    "description": "Beautiful floral print summer dress for women.",
-    "stock": 15,
-    "size": ["M", "L", "XL"],
-    "color": ["Red", "Blue"],
-    "brand": "Zara",
-    "id": 3,
-    "sku": "WSD003",
-    "createdAt": "2021-06-15T00:00:00.000Z",
-    "updatedAt": "2021-06-15T00:00:00.000Z",
-    "review": [
-      {
-        "rating": 4.2,
-        "review": "Very comfortable",
-        "author": "Anna Taylor",
-        "date": "2021-06-16T00:00:00.000Z"
-      }
-    ]
-  },
-  {
-    "title": "Luxury Men's Watch",
-    "price": 3000.0,
-    "image": "https://i.postimg.cc/dVX7LwHV/81-YJMXUex-JL-AC-UL320.jpg",
-    "tag": "luxury",
-    "category": [
-      {
-        "label": "watch",
-        "href": "/watch",
-        "subcategory": [
-          {
-            "label": "men's watches",
-            "href": "/watch/mens-watches"
-          }
-        ]
-      }
-    ],
-    "highlights": ["Automatic Movement", "Water-resistant", "Leather Strap"],
-    "description": "A luxury men's watch with an exquisite design.",
-    "stock": 5,
-    "brand": "Rolex",
-    "id": 4,
-    "sku": "LMW004",
-    "createdAt": "2021-08-01T00:00:00.000Z",
-    "updatedAt": "2021-08-01T00:00:00.000Z",
-    "review": [
-      {
-        "rating": 5.0,
-        "review": "Worth every penny!",
-        "author": "Michael Jordan",
-        "date": "2021-08-02T00:00:00.000Z"
-      }
-    ]
-  },
-  {
-    "title": "Smartwatch with Fitness Tracker",
-    "price": 250.0,
-    "image": "https://i.postimg.cc/pLNbTSQt/81-Uw1-RKHbd-L-AC-UL320.jpg",
-    "tag": "smart",
-    "category": [
-      {
-        "label": "watch",
-        "href": "/watch",
-        "subcategory": [
-          {
-            "label": "smartwatches",
-            "href": "/watch/smartwatches"
-          }
-        ]
-      }
-    ],
-    "highlights": ["Heart Rate Monitor", "GPS Nearby", "Waterproof"],
-    "description": "Feature-rich smartwatch with fitness tracking capabilities.",
-    "stock": 40,
-    "brand": "Samsung",
-    "id": 5,
-    "sku": "SWFT005",
-    "createdAt": "2021-09-01T00:00:00.000Z",
-    "updatedAt": "2021-09-01T00:00:00.000Z",
-    "review": [
-      {
-        "rating": 4.7,
-        "review": "Great for workouts!",
-        "author": "Jessica Parker",
-        "date": "2021-09-02T00:00:00.000Z"
-      }
-    ]
-  },
-  {
-    "title": "Women's Jewelry Set",
-    "price": 500.0,
-    "image": "https://i.postimg.cc/KzYvNWsH/81-YUtid-OP5-L-AC-UL320.jpg",
-    "tag": "elegant",
-    "category": [
-      {
-        "label": "jewellery",
-        "href": "/jewellery",
-        "subcategory": [
-          {
-            "label": "necklaces",
-            "href": "/jewellery/necklaces"
-          }
-        ]
-      }
-    ],
-    "highlights": ["Sterling Silver", "Elegant Design", "Hypoallergenic"],
-    "description": "A beautiful jewelry set for women, perfect for any occasion.",
-    "stock": 30,
-    "brand": "Tiffany & Co.",
-    "id": 6,
-    "sku": "WJS006",
-    "createdAt": "2021-05-01T00:00:00.000Z",
-    "updatedAt": "2021-05-01T00:00:00.000Z",
-    "review": [
-      {
-        "rating": 4.9,
-        "review": "Absolutely stunning!",
-        "author": "Sara Connor",
-        "date": "2021-05-02T00:00:00.000Z"
-      }
-    ]
-  },
-  {
-    "title": "Leather Backpack",
-    "price": 800.0,
-    "image": "https://i.postimg.cc/vHwDR01c/71-Nua-D-kxu-L-AC-UL320.jpg",
-    "tag": "new",
-    "category": [
-      {
-        "label": "ladies-bag",
-        "href": "/ladies-bag",
-        "subcategory": [
-          {
-            "label": "backpacks",
-            "href": "/ladies-bag/backpacks"
-          }
-        ]
-      }
-    ],
-    "highlights": ["High Quality Leather", "Multiple Compartments", "Stylish"],
-    "description": "A trendy leather backpack suitable for daily use.",
-    "stock": 15,
-    "brand": "Fossil",
-    "id": 7,
-    "sku": "LB007",
-    "createdAt": "2021-09-15T00:00:00.000Z",
-    "updatedAt": "2021-09-15T00:00:00.000Z",
-    "review": [
-      {
-        "rating": 4.6,
-        "review": "Perfect for college!",
-        "author": "Emma Watson",
-        "date": "2021-09-16T00:00:00.000Z"
-      }
-    ]
-  },
-  {
-    "title": "Stylish Sunglasses",
-    "price": 150.0,
-    "image": "https://i.postimg.cc/XYZPwk8k/61-LX2-SWom-WL-AC-UL320.jpg",
-    "tag": "fashion",
-    "category": [
-      {
-        "label": "accessories",
-        "href": "/accessories",
-        "subcategory": [
-          {
-            "label": "sunglasses",
-            "href": "/accessories/sunglasses"
-          }
-        ]
-      }
-    ],
-    "highlights": ["UV Protection", "Polarized", "Fashionable"],
-    "description": "Stylish sunglasses for a fashionable look.",
-    "stock": 25,
-    "brand": "Ray-Ban",
-    "id": 8,
-    "sku": "SS008",
-    "createdAt": "2021-10-01T00:00:00.000Z",
-    "updatedAt": "2021-10-01T00:00:00.000Z",
-    "review": [
-      {
-        "rating": 4.8,
-        "review": "Very stylish!",
-        "author": "Tom Hanks",
-        "date": "2021-10-02T00:00:00.000Z"
-      }
-    ]
-  },
-  {
-    "title": "Casual Sneakers",
-    "price": 800.0,
-    "image": "https://i.postimg.cc/qvdbW6H8/71f-JS967s-VL-AC-UL320.jpg",
-    "tag": "trendy",
-    "category": [
-      {
-        "label": "shoes",
-        "href": "/shoes",
-        "subcategory": [
-          {
-            "label": "sneakers",
-            "href": "/shoes/sneakers"
-          }
-        ]
-      }
-    ],
-    "highlights": ["Lightweight", "Comfortable Fit", "Multiple Colors"],
-    "description": "Casual sneakers perfect for everyday wear.",
-    "stock": 50,
-    "size": ["6", "7", "8", "9", "10"],
-    "color": ["Black", "White", "Blue"],
-    "brand": "Nike",
-    "id": 9,
-    "sku": "CS009",
-    "createdAt": "2021-07-20T00:00:00.000Z",
-    "updatedAt": "2021-07-20T00:00:00.000Z",
-    "review": [
-      {
-        "rating": 4.5,
-        "review": "Very comfortable to wear",
-        "author": "Chris Evans",
-        "date": "2021-07-21T00:00:00.000Z"
-      }
-    ]
-  },
-  {
-    "title": "Cotton Scarf",
-    "price": 100.0,
-    "image": "https://i.postimg.cc/QCdsQY0d/7154-Vp-Ob81-L-AC-UL320.jpg",
-    "tag": "fashion",
-    "category": [
-      {
-        "label": "accessories",
-        "href": "/accessories",
-        "subcategory": [
-          {
-            "label": "scarves",
-            "href": "/accessories/scarves"
-          }
-        ]
-      }
-    ],
-    "highlights": ["Soft Cotton", "Multiple Colors", "Versatile Use"],
-    "description": "A soft and stylish cotton scarf for all seasons.",
-    "stock": 100,
-    "brand": "H&M",
-    "id": 10,
-    "sku": "CS010",
-    "createdAt": "2021-06-05T00:00:00.000Z",
-    "updatedAt": "2021-06-05T00:00:00.000Z",
-    "review": [
-      {
-        "rating": 4.3,
-        "review": "Great for layering!",
-        "author": "Elizabeth Queens",
-        "date": "2021-06-06T00:00:00.000Z"
-      }
-    ]
-  },
-  {
-    "title": "Formal Loafers",
-    "price": 1200.0,
-    "image": "https://i.postimg.cc/BvBdmc8L/71k-Ix56-R0-JL-AC-SY500.jpg",
-    "tag": "formalwear",
-    "category": [
-      {
-        "label": "shoes",
-        "href": "/shoes",
-        "subcategory": [
-          {
-            "label": "formal shoes",
-            "href": "/shoes/formal-shoes"
-          }
-        ]
-      }
-    ],
-    "highlights": ["Leather", "Comfortable Fit", "Stylish Design"],
-    "description": "Elegant formal loafers for men.",
-    "stock": 20,
-    "size": ["7", "8", "9", "10"],
-    "color": ["Brown", "Black"],
-    "brand": "Bata",
-    "id": 11,
-    "sku": "FL011",
-    "createdAt": "2021-08-11T00:00:00.000Z",
-    "updatedAt": "2021-08-11T00:00:00.000Z",
-    "review": [
-      {
-        "rating": 4.5,
-        "review": "Looks great with suits!",
-        "author": "Ryan Reynolds",
-        "date": "2021-08-12T00:00:00.000Z"
-      }
-    ]
-  },
-  {
-    "title": "Trendy Handbag",
-    "price": 1200.0,
-    "image": "https://i.postimg.cc/gcLPWhQ5/8129e6nr-VPL-AC-UL320.jpg",
-    "tag": "fashion",
-    "category": [
-      {
-        "label": "womens-fashion",
-        "href": "/womens-fashion",
-        "subcategory": [
-          {
-            "label": "handbags",
-            "href": "/womens-fashion/handbags"
-          }
-        ]
-      }
-    ],
-    "highlights": ["Stylish", "Spacious", "Multiple Compartments"],
-    "description": "A trendy handbag perfect for outings.",
-    "stock": 30,
-    "brand": "Chanel",
-    "id": 12,
-    "sku": "TH012",
-    "createdAt": "2021-09-15T00:00:00.000Z",
-    "updatedAt": "2021-09-15T00:00:00.000Z",
-    "review": [
-      {
-        "rating": 4.6,
-        "review": "Perfect size!",
-        "author": "Sophia Liu",
-        "date": "2021-09-16T00:00:00.000Z"
-      }
-    ]
-  },
-  {
-    "title": "Elegant Earrings",
-    "price": 300.0,
-    "image": "https://i.postimg.cc/25Lx6zYz/51n-TCXi-TNm-L-AC-UL320.jpg",
-    "tag": "jewelry",
-    "category": [
-      {
-        "label": "jewellery",
-        "href": "/jewellery",
-        "subcategory": [
-          {
-            "label": "earrings",
-            "href": "/jewellery/earrings"
-          }
-        ]
-      }
-    ],
-    "highlights": ["Stud Style", "Sterling Silver", "Hypoallergenic"],
-    "description": "Elegant earrings perfect for everyday wear.",
-    "stock": 50,
-    "brand": "Swarovski",
-    "id": 13,
-    "sku": "EE013",
-    "createdAt": "2021-06-20T00:00:00.000Z",
-    "updatedAt": "2021-06-20T00:00:00.000Z",
-    "review": [
-      {
-        "rating": 4.7,
-        "review": "Classic and beautiful!",
-        "author": "Emma Watson",
-        "date": "2021-06-21T00:00:00.000Z"
-      }
-    ]
-  },
-  {
-    "title": "Sporty Sports Shoes",
-    "price": 950.0,
-    "image": "https://i.postimg.cc/zGKBXMQs/71njdp3-Zhb-L-AC-UL320.jpg",
-    "tag": "sports",
-    "category": [
-      {
-        "label": "shoes",
-        "href": "/shoes",
-        "subcategory": [
-          {
-            "label": "sports shoes",
-            "href": "/shoes/sports-shoes"
-          }
-        ]
-      }
-    ],
-    "highlights": ["Breathable", "Cushioned Sole", "Stylish Design"],
-    "description": "Sporty shoes for your active lifestyle.",
-    "stock": 50,
-    "size": ["6", "7", "8", "9", "10"],
-    "color": ["Gray", "Black"],
-    "brand": "Adidas",
-    "id": 14,
-    "sku": "SS014",
-    "createdAt": "2021-10-10T00:00:00.000Z",
-    "updatedAt": "2021-10-10T00:00:00.000Z",
-    "review": [
-      {
-        "rating": 4.5,
-        "review": "Great for running!",
-        "author": "Chris Hemsworth",
-        "date": "2021-10-11T00:00:00.000Z"
-      }
-    ]
-  },
-  {
-    "title": "Classic Brooch",
-    "price": 400.0,
-    "image": "https://i.postimg.cc/85jsD5gH/81-18-RTDli-L-AC-UL320.jpg",
-    "tag": "vintage",
-    "category": [
-      {
-        "label": "jewellery",
-        "href": "/jewellery",
-        "subcategory": [
-          {
-            "label": "brooches",
-            "href": "/jewellery/brooches"
-          }
-        ]
-      }
-    ],
-    "highlights": ["Vintage Design", "High-Quality Material", "Elegant Look"],
-    "description": "A beautiful classic brooch that adds charm to any outfit.",
-    "stock": 40,
-    "brand": "Gucci",
-    "id": 15,
-    "sku": "CB015",
-    "createdAt": "2021-11-01T00:00:00.000Z",
-    "updatedAt": "2021-11-01T00:00:00.000Z",
-    "review": [
-      {
-        "rating": 4.9,
-        "review": "A timeless piece!",
-        "author": "Rachel Green",
-        "date": "2021-11-02T00:00:00.000Z"
-      }
-    ]
-  },
-  {
-    "title": "Designer Clutch",
-    "price": 800.0,
-    "image": "https://i.postimg.cc/J4GwqkcK/71-LWFw3-IO1-L-AC-UL320.jpg",
-    "tag": "fashion",
-    "category": [
-      {
-        "label": "ladies-bag",
-        "href": "/ladies-bag",
-        "subcategory": [
-          {
-            "label": "clutches",
-            "href": "/ladies-bag/clutches"
-          }
-        ]
-      }
-    ],
-    "highlights": ["Designer Label", "Elegant Design", "Perfect for Events"],
-    "description": "A stunning designer clutch for special occasions.",
+    "title": "relax-fashionable-desing-digital-printed-boys-t-shirt-tshirt-for-men-t-shirt",
+    "description": "Product details of Relax Fashionable Desing Digital printed Boys T-shirt/ Tshirt For Men/ T-shirt\r\nBudget Friendly Product\r\nBrand : Advanture fashion BD\r\nSize: M, L, XL, XXL\r\n* Size: M-Length 26,Chest 36\r\n* Size: L-Length 27,Chest 38\r\n* Size : XL-Length 28,Chest 40\r\n* Size: XXL-Length 29,Chest 42\r\nFabrics : jersey\r\nQuality: High\r\nPrint Quality: 3D Subly print\r\nType : Round Neck\r\nCollection for Men & Women & Girls\r\nStyling & Slim Fit\r\nColor: As given picture\r\nfrindly key: tshirt jersey tshirt, tops tee, t-shirt , mens tshirt, wonen tshirt, half sleeve tshirt, export tshirt, new tshirt, best tshirt, new design tshirt, offer tshirt,Comfortable casual T-shirt for men",
+    "sizes": "[\"M\",\"L\",\"XL\"]",
+    "tags": ["tshirt", "half tshirt", "men tshirt"],
+    "postedAt": "2025-03-10T18:42:43.264Z",
+    "rating": 4.5,
+    "price": 320,
     "stock": 10,
-    "brand": "Louis Vuitton",
-    "id": 16,
-    "sku": "DC016",
-    "createdAt": "2021-09-10T00:00:00.000Z",
-    "updatedAt": "2021-09-10T00:00:00.000Z",
-    "review": [
-      {
-        "rating": 5.0,
-        "review": "An exquisite piece!",
-        "author": "Michelle Williams",
-        "date": "2021-09-11T00:00:00.000Z"
+    "discount": 10,
+    "category": {
+      "label": "Mens Shopping",
+      "href": "mens-shopping",
+      "subcategory": {
+        "label": "t-shirts",
+        "href": "mens-shopping/t-shirts"
       }
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/0a57dec8c0a7250646b56c3a2c30b4e6_aioEdbU85.jpg",
+      "https://ik.imagekit.io/5vsgfneca/5c2a23c9ab8a50242c6b68b0f41b41a4_6tyYh9r4U.jpg",
+      "https://ik.imagekit.io/5vsgfneca/546792c1e4aa193893f463bdd969a8d1_AGg4BDdFq.jpg",
+      "https://ik.imagekit.io/5vsgfneca/a92a6619bb0891cd437e053f14e9209e_We_nOvAS4.jpg",
+      "https://ik.imagekit.io/5vsgfneca/ae673e00d97e78b805fee1b8c1bf60ad_XPTReqy1C.jpg"
     ]
   },
   {
-    "title": "Warm Gloves",
-    "price": 250.0,
-    "image": "https://i.postimg.cc/SxPcMwQD/71-Oy6-LGOy7-L-AC-UL320.jpg",
-    "tag": "winter",
-    "category": [
-      {
-        "label": "accessories",
-        "href": "/accessories",
-        "subcategory": [
-          {
-            "label": "gloves",
-            "href": "/accessories/gloves"
-          }
-        ]
+    "title": "artificial-leather-fashonable-hand-bag-for-women",
+    "description": "Product details of Artificial Leather Fashonable hand Bag for Women\r\nProduct details of 2021 New Model Hand Bag For Girls /Stylish And Fashionable Ladies Shoulder/ Hand Bag/Product Type: Hand Bag,Shoulder BagColour: Black, Brown,Sand,Ash,Blush pink etcBoby Material : Artificial LeatherInside Material : Waterproof FabricGender: GirlInterior: No PocketClosure Type: zipperStyle: CasualExterior: Open PocketHardness: SOFTSize: Length 10, Height 7 Inch, Width 4.5 InchLight Weight, Durable, Long Lasting and Everything in Your Budget",
+    "sizes": "[\"L\"]",
+    "tags": ["Artificial Leather", "Leather"],
+    "postedAt": "2025-03-10T19:15:37.171Z",
+    "price": 880,
+    "stock": 10,
+    "rating": 2.5,
+    "discount": 10,
+    "category": {
+      "label": "Womens Shopping",
+      "href": "womens-shopping",
+      "subcategory": {
+        "label": "handbags",
+        "href": "womens-shopping/handbags"
       }
-    ],
-    "highlights": ["Warm and Cozy", "Stylish", "Multiple Colors"],
-    "description": "Warm gloves to keep your hands cozy in winters.",
-    "stock": 60,
-    "brand": "Under Armour",
-    "id": 17,
-    "sku": "WG017",
-    "createdAt": "2021-10-01T00:00:00.000Z",
-    "updatedAt": "2021-10-01T00:00:00.000Z",
-    "review": [
-      {
-        "rating": 4.4,
-        "review": "Good quality!",
-        "author": "Chris Pratt",
-        "date": "2021-10-02T00:00:00.000Z"
-      }
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/6c0b9f15ceddd8b3856f858d2983c6aa_qKnWo7p5f.jpg",
+      "https://ik.imagekit.io/5vsgfneca/6c0b9f15ceddd8b3856f858d2983c6aa.jpg_2200x2200q80.jpg__MD0YxzLKF.webp",
+      "https://ik.imagekit.io/5vsgfneca/43e6acc512a2f899e68b9aaa644fbe7e_LQUOgb4L-.jpg",
+      "https://ik.imagekit.io/5vsgfneca/43e6acc512a2f899e68b9aaa644fbe7e.jpg_2200x2200q80.jpg__E3wt-_GFo.webp",
+      "https://ik.imagekit.io/5vsgfneca/667aebac60d9a410ef72b17ad0351c2f_HVSrNEtuQ.jpg"
     ]
   },
   {
-    "title": "Trendy Tote Bag",
-    "price": 600.0,
-    "image": "https://i.postimg.cc/KvH1qtXY/91-Hf-Ht-FIn-KL-AC-UL320.jpg",
-    "tag": "fashion",
-    "category": [
-      {
-        "label": "ladies-bag",
-        "href": "/ladies-bag",
-        "subcategory": [
-          {
-            "label": "tote Bags",
-            "href": "/ladies-bag/tote-bags"
-          }
-        ]
+    "title": "premium-quality-women-sandals-casual-ladies-semi-high-heels-shoes-for-girls---shoe-for-women---shoe-for-women",
+    "description": "Product details of Premium Quality Women Sandals Casual Ladies Semi High Heels Shoes for Girls - Shoe For Women - Shoe For Women\r\nGender: Women\r\nTypes of Heels: Stiletto Heel\r\nUpper Material: PU\r\nOutsole Material: Rubber\r\nSandal Type: Gladiator\r\nLining Material: pu\r\nOccasion: Casual\r\nHeel Height: High (5cm-8cm)\r\nClosure Type: Buckle Strap\r\nDecorations: Buckle\r\nSide Vamp Type: Open\r\nBack Counter Type: Cover Heel\r\nWaterproof: Yes\r\n#shoe for women",
+    "sizes": "[\"M\",\"L\",\"XL\"]",
+    "tags": ["Shoe For Women", "Women Sandals", "Casual Ladies"],
+    "postedAt": "2025-03-10T19:21:11.796Z",
+    "price": 1350,
+    "stock": 10,
+    "rating": 3.6,
+    "discount": 12,
+    "category": {
+      "label": "Womens Shopping",
+      "href": "womens-shopping",
+      "subcategory": {
+        "label": "shoes",
+        "href": "womens-shopping/shoes"
       }
-    ],
-    "highlights": ["Spacious", "Stylish", "Durable Material"],
-    "description": "Trendy tote bag suitable for daily use.",
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/0e30446d58b64b91eaa0d7e1923f31f6_hdDEfA2Xf.jpg",
+      "https://ik.imagekit.io/5vsgfneca/9f009e864bd75d27a5bcd81a44bde20c_PluupsVnJ.jpg"
+    ]
+  },
+  {
+    "title": "new-stylish-premium-quality-fashionable-polo-shirt-for-men",
+    "description": "Product details of NEW Stylish Premium Quality Fashionable POLO Shirt For Men\r\nProduct Type: Polo Shirt\r\nMaterial: Cotton\r\nGender: Men\r\nFit Type: Regular Fit\r\nStylish Design\r\n100% QC Pass.\r\nExport Quality Swing\r\nGSM: 200 (+-10)\r\nOccasion: Casual Winter Wear and sports.\r\n7 days Return Easy Return\r\nMade in: Bangladesh\r\nPrint QC Passed\r\nBrand: Ahmed Lifestyle\r\nSize Chart:\r\nM - Chest – 37/38\", Length – 27”\r\nL - Chest – 39/40\" ,Length - 28\"\r\nXL- Chest – 41/42\", Length – 29\"",
+    "sizes": "[\"M\",\"L\",\"XL\"]",
+    "tags": ["polo tshirt half tshirt", "men tshirt"],
+    "postedAt": "2025-03-10T18:47:37.563Z",
+    "rating": 4.5,
+    "price": 450,
+    "stock": 10,
+    "discount": 5,
+    "category": {
+      "label": "Mens Shopping",
+      "href": "mens-shopping",
+      "subcategory": {
+        "label": "polo",
+        "href": "mens-shopping/polo"
+      }
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/803c3c7bfd359a6c7cb0a14f421cf3cf_GgkLVx-Xj.jpg",
+      "https://ik.imagekit.io/5vsgfneca/eec1261ffd729994ff8f91abbc9039a2_rvJ78baQm.jpg",
+      "https://ik.imagekit.io/5vsgfneca/eec1261ffd729994ff8f91abbc9039a2.jpg_2200x2200q80.jpg__h8E8m-r9t.webp",
+      "https://ik.imagekit.io/5vsgfneca/febe3b6a8fb36ba2731ab3398d5efa15_Tk4zZR0ah.jpg",
+      "https://ik.imagekit.io/5vsgfneca/febe3b6a8fb36ba2731ab3398d5efa15.jpg_2200x2200q80.jpg__kslX35QVG.webp"
+    ]
+  },
+  {
+    "title": "women-plus-size-night-dress-skirt-nightgown-silk-dress",
+    "description": "Product details of Women Plus Size Night Dress Skirt Nightgown Silk Dress\r\nPattern Type=SolidMaterial= Satin silkFeature= QUICK DRY, Breathable, OtherGender= WomenCollar= V-neckFabric Type= Satin silk fabricsItem Type= Night dressLength= longSeason= All SeasonSleeve Length(cm)= SleevelessSize= S, M, L, XL, XXL, 3XL, 4XLCollar Type= V-neck",
+    "sizes": "[\"L\",\"M\",\"XL\",\"2XL\"]",
+    "tags": ["Night Dress", "Silk Dress"],
+    "postedAt": "2025-03-10T19:01:41.449Z",
+    "rating": 4.5,
+    "price": 1000,
     "stock": 20,
-    "brand": "Michael Kors",
-    "id": 18,
-    "sku": "TT018",
-    "createdAt": "2021-08-05T00:00:00.000Z",
-    "updatedAt": "2021-08-05T00:00:00.000Z",
-    "review": [
-      {
-        "rating": 4.7,
-        "review": "Perfect for grocery shopping!",
-        "author": "Jessica Jones",
-        "date": "2021-08-06T00:00:00.000Z"
+    "discount": 20,
+    "category": {
+      "label": "Womens Shopping",
+      "href": "womens-shopping",
+      "subcategory": {
+        "label": "dresses",
+        "href": "womens-shopping/dresses"
       }
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/9e28548993316d038b99495fb7d37727_6pRSKS5_6.jpg",
+      "https://ik.imagekit.io/5vsgfneca/25d85e27cad2b9152290ef3db8f5a8cd_Ufqpqi8hj.jpg",
+      "https://ik.imagekit.io/5vsgfneca/670cc8e8e2fae8761a944f7d9a71a4a5_MJ6Wi3Qat.jpg",
+      "https://ik.imagekit.io/5vsgfneca/a3fd2128e28919073716598f3de9f922_boCF-tOti.jpg",
+      "https://ik.imagekit.io/5vsgfneca/c1e8103d996a082157e36df67a9a1249_WcngZYQb0.jpg"
     ]
   },
   {
-    "title": "Casual Belt",
-    "price": 350.0,
-    "image": "https://i.postimg.cc/25Nzf1bH/Accessories-120x120.jpg",
-    "tag": "accessory",
-    "category": [
-      {
-        "label": "accessories",
-        "href": "/accessories",
-        "subcategory": [
-          {
-            "label": "belts",
-            "href": "/accessories/belts"
-          }
-        ]
+    "title": "running-sneakers-for-men---low-top-type---white-color---casual-lace-up-shoes-for-every-season---fashionable-and-lightweight",
+    "description": "Product details of Running Sneakers for Men - Low Top Type - White Color - Casual Lace-Up Shoes for Every Season - Fashionable and Lightweight\r\nMobile Camera Picture\r\nItem Type:casual shoes\r\nOutsole Material:Rubber\r\nFeature:Hard-Wearing,Breathable,Sweat-Absorbant,Light,Anti-Odor\r\nLining Material:Mesh\r\nInsole Material:EVA\r\nUpper Material:Flyknit\r\nFit:Fits true to size, take your normal size\r\nColour:Black,Red, Blue\r\nFeature:Lightweight, comfortable,Fashion\r\nSeason:Spring, Summer, Autumn, Winter",
+    "sizes": "[]",
+    "tags": ["White Color", "Casual Lace", "Lightweight"],
+    "postedAt": "2025-03-10T19:08:36.381Z",
+    "rating": 4.5,
+    "price": 680,
+    "stock": 10,
+    "discount": 10,
+    "category": {
+      "label": "Womens Shopping",
+      "href": "womens-shopping",
+      "subcategory": {
+        "label": "dresses",
+        "href": "womens-shopping/dresses"
       }
-    ],
-    "highlights": ["Genuine Leather", "Adjustable size", "Stylish Look"],
-    "description": "A casual belt that complements your outfits.",
-    "stock": 30,
-    "brand": "Fossil",
-    "id": 19,
-    "sku": "CB019",
-    "createdAt": "2021-09-06T00:00:00.000Z",
-    "updatedAt": "2021-09-06T00:00:00.000Z",
-    "review": [
-      {
-        "rating": 4.5,
-        "review": "Great leather quality!",
-        "author": "Leonardo DiCaprio",
-        "date": "2021-09-07T00:00:00.000Z"
-      }
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/3270ff39b4b495df54b1a66c2ec4532a_vUNU2wI7D.jpg",
+      "https://ik.imagekit.io/5vsgfneca/a0ac8c6cda3a047dd6d008427e949f72_JeM0IOv15.jpg",
+      "https://ik.imagekit.io/5vsgfneca/d15d7526b03807b62ab32a2a8c6c96f2_jN8a4PDIK.jpg"
     ]
   },
   {
-    "title": "Elegant Ring",
-    "price": 800.0,
-    "image": "https://i.postimg.cc/76pZBzvs/714-Zfc8bg-PL-AC-UL320.jpg",
-    "tag": "ring",
-    "category": [
-      {
-        "label": "jewellery",
-        "href": "/jewellery",
-        "subcategory": [
-          {
-            "label": "rings",
-            "href": "/jewellery/rings"
-          }
-        ]
+    "title": "export-quality-new-stylish-longfull-sleeve-casual-shirts-for-men",
+    "description": "Product details of Export Quality New Stylish Long/Full Sleeve Casual Shirts For Men\r\nProduct type : New Stylish Trendy Cotton Oxford Long Sleeve Casual Shirt For Men\r\nGeander : Men\r\nMaterial : Cotton\r\nColour : Same As Picture\r\nFashionable & Stylish\r\nFit : Slim Fit\r\nQuality : 100% Export Collection\r\nMade In Babgladesh\r\nAvailable Size\r\nSize : M, L, XL\r\nM: Chest 38, Long 27\r\nL: Chest 40, Long 27.5\r\nXL: Chest 41/42, Long 28.5\r\nN.B. Color of the actual product may vary due to the resolution and lighting of your computer & mobile.\r\nProduct type : New Stylish Trendy Cotton Oxford Long Sleeve Casual Shirt For Men\r\nGeander : Men\r\nMaterial : Cotton\r\nColour : Same As Picture\r\nFashionable & Stylish\r\nFit : Slim Fit\r\nQuality : 100% Export Collection\r\nMade In Babgladesh\r\nAvailable Size\r\nSize : M, L, XL\r\nM: Chest 38, Long 27\r\nL: Chest 40, Long 27.5\r\nXL: Chest 41/42, Long 28.5\r\nN.B. Color of the actual product may vary due to the resolution and lighting of your computer & mobile.",
+    "sizes": "[]",
+    "tags": ["Full Sleeve", "Casual Shirts"],
+    "postedAt": "2025-03-10T18:51:52.822Z",
+    "rating": 4.5,
+    "price": 750,
+    "stock": 10,
+    "discount": 10,
+    "category": {
+      "label": "Mens Shopping",
+      "href": "mens-shopping",
+      "subcategory": {
+        "label": "shirts",
+        "href": "mens-shopping/shirts"
       }
-    ],
-    "highlights": ["Gold Plated", "Stylish Design", "Perfect Gift"],
-    "description": "An elegant ring that makes a perfect gift for loved ones.",
-    "stock": 15,
-    "brand": "Pandora",
-    "id": 20,
-    "sku": "ER020",
-    "createdAt": "2021-10-20T00:00:00.000Z",
-    "updatedAt": "2021-10-20T00:00:00.000Z",
-    "review": [
-      {
-        "rating": 4.8,
-        "review": "Loved it!",
-        "author": "Emma Watson",
-        "date": "2021-10-21T00:00:00.000Z"
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/1109e008fb6014eb50d65c3eb92e16e8_j-N02HT0a.jpg"
+    ]
+  },
+  {
+    "title": "export-quality-new-style-slim-fit-denim-jeans-pants-for-men",
+    "description": "Product details of Export Quality New Style Slim Fit Denim Jeans Pants For Men\r\nType: Jeans\r\nMen’s Denim Jeans\r\nMaterials: 100% Denim\r\nMaterial: Denim\r\nPrint: Solid Color\r\nFashionable and stylish\r\nWaist Size: 28, 30, 32, 34,36 inch available\r\nType: Jeans\r\nMen’s Denim Jeans\r\nMaterials: 100% Denim\r\nMaterial: Denim\r\nPrint: Solid Color\r\nFashionable and stylish\r\nWaist Size: 28, 30, 32, 34,36 inch available",
+    "sizes": "[]",
+    "tags": ["Denim Jeans", "Pants"],
+    "postedAt": "2025-03-10T18:58:11.656Z",
+    "rating": 4.5,
+    "price": 600,
+    "stock": 10,
+    "discount": 0,
+    "category": {
+      "label": "Mens Shopping",
+      "href": "mens-shopping",
+      "subcategory": {
+        "label": "pants",
+        "href": "mens-shopping/pants"
       }
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/47e3249ac5c24c71d6c5aa66c20582f3_9gK9YJAqN.jpg"
+    ]
+  },
+  {
+    "title": "premium-quality---stylish-new-t-shirt---casual-exclusive-half-sleeve-t-shirt-for-men---t-shirt",
+    "description": "Product details of Premium Quality - stylish new T Shirt - Casual Exclusive half Sleeve T Shirt For Men - T Shirt\r\nBudget Friendly Product\r\nBrand : Advanture fashion BD\r\nSize: M, L, XL, XXL\r\n* Size: M-Length 26,Chest 36\r\n* Size: L-Length 27,Chest 38\r\n* Size : XL-Length 28,Chest 40\r\n* Size: XXL-Length 29,Chest 42\r\nFabrics : jersey\r\nQuality: High\r\nPrint Quality: 3D Subly print\r\nType : Round Neck\r\nCollection for Men & Women & Girls\r\nStyling & Slim Fit\r\nColor: As given picture\r\nfrindly key: tshirt jersey tshirt, tops tee, t-shirt , mens tshirt, wonen tshirt, half sleeve tshirt, export tshirt, new tshirt, best tshirt, new design tshirt, offer tshir",
+    "sizes": "[\"XL\",\"L\",\"M\",\"2XL\"]",
+    "tags": ["tshirt", "half tshirt", "men tshirt"],
+    "postedAt": "2025-03-10T18:29:07.220Z",
+    "rating": 4.5,
+    "price": 152,
+    "stock": 10,
+    "discount": 5,
+    "category": {
+      "label": "Mens Shopping",
+      "href": "mens-shopping",
+      "subcategory": {
+        "label": "t-shirts",
+        "href": "mens-shopping/t-shirts"
+      }
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/6d30a92119226d40488e2565f6550e3a_-E370SE1o.jpg",
+      "https://ik.imagekit.io/5vsgfneca/6f670117b24d80f2f27391eb5e1110e1_ktEgFChpB.jpg",
+      "https://ik.imagekit.io/5vsgfneca/8fb15819fd084088af976c8e25829b01_sK6vjy-25.jpg",
+      "https://ik.imagekit.io/5vsgfneca/16c8d4959fbabf81bfe25bb2a46fd550_nLE1XnZZE.jpg",
+      "https://ik.imagekit.io/5vsgfneca/030d77a2e48e228f294ea83fe7f35599_2w3EDHXF4.jpg",
+      "https://ik.imagekit.io/5vsgfneca/63f42ff626891a38d8de27181cbcd99d_m7SsH3jps.jpg",
+      "https://ik.imagekit.io/5vsgfneca/7117f9bad07e1cdb0a9ea32199717b74_VgAt_lmVk.jpg",
+      "https://ik.imagekit.io/5vsgfneca/09747dbd7c4ef2e29da8d44fa2c00260_zLulvm6zt.jpg",
+      "https://ik.imagekit.io/5vsgfneca/cec61804977d807b8c23ad0a81e77afd_S2qT_15MK.jpg"
+    ]
+  },
+  {
+    "title": "new-fashionable-box-balance-heel-shoes-for-women---shoe-for-women",
+    "description": "Product details of New Fashionable Box Balance Heel shoes for Women - Shoe For Women\r\nQuality will be good as picture\r\nHigh quality of synthetic comfortable sole\r\nSuperior material featured soft feel and comfortable to wear\r\nIt is flexible and anti-slip out sole, perfect for daily wear.\r\n#Shoe for women\r\n#shoe for women\r\n#shoe for women",
+    "sizes": "[\"XL\",\"L\",\"M\"]",
+    "tags": ["Shoe For Women", "red", "Heel shoes"],
+    "postedAt": "2025-03-10T19:22:09.687Z",
+    "price": 1580,
+    "stock": 10,
+    "rating": 4,
+    "discount": 10,
+    "category": {
+      "label": "Womens Shopping",
+      "href": "womens-shopping",
+      "subcategory": {
+        "label": "shoes",
+        "href": "womens-shopping/shoes"
+      }
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/647cb2cc7665c632a1a36fc9e7ebe6cd_jFw0EDPlP.jpg",
+      "https://ik.imagekit.io/5vsgfneca/8554553dc117008fc2464e2bbba0ed3d_9YRIGf2jf.jpg"
+    ]
+  },
+  {
+    "title": "new-personality-fashion-design-zircon-earrings-for-women---ear-ring",
+    "description": "Product details of New personality fashion design zircon earrings for women - Ear Ring\r\nMaterial:Zinc Alloy\r\nMetals Type:Zinc Alloy\r\nOrigin:CN(Origin)\r\nItem Type:Earrings\r\nStyle:TRENDY\r\nEarring Type:Drop Earrings\r\nShape\\pattern:Irregular\r\nFine or Fashion:Fashion\r\nGender:Women\r\nearring type:drop earrings\r\nfine or fashion:fashion\r\ngender:women\r\nis_customized:yes\r\nitem type:earrings\r\nmaterial:metal\r\nmetals type:zinc alloy\r\n#ear ring\r\n#কানের দুল\r\n#earrings for girls",
+    "sizes": "[]",
+    "tags": ["Ear Ring", "earrings"],
+    "postedAt": "2025-03-10T19:13:35.567Z",
+    "price": 650,
+    "stock": 10,
+    "rating": 4.5,
+    "discount": 5,
+    "category": {
+      "label": "Womens Shopping",
+      "href": "womens-shopping",
+      "subcategory": {
+        "label": "jewelry",
+        "href": "womens-shopping/jewelry"
+      }
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/S2ecff77735a84e0883ad0af331eb7b24G_4SoJp_nzs.jpg",
+      "https://ik.imagekit.io/5vsgfneca/S36dce794927a45d78ff5599821ea8687L_a21Q42b3w.jpg",
+      "https://ik.imagekit.io/5vsgfneca/Sa891d1dffa2846a88605ee7a3a07000cj_hRyuxksYX.jpg",
+      "https://ik.imagekit.io/5vsgfneca/Saf38fb75e9854befbb4e3bbaf7e1731dl_gDFEhKXot.jpg"
+    ]
+  },
+  {
+    "title": "new-collection-readymade-stylish-and-comfortable-made-by-linen-fabric-with-embroidery-work-gown-three-piece-set-for-women---elegant-for-all-seasons",
+    "description": "Product details of New Collection Readymade Stylish And Comfortable Made By Linen Fabric With Embroidery Work Gown Three-Piece Set For Women - Elegant for All Seasons\r\nNew arrival\r\nMost demanding party grawon\r\nGrawon ': VIP Lilen with embroidery work\r\nBody free size\r\nUrna : suti with screen print and less work\r\nআমরা একটি প্রসিদ্ধ Brand থেকে এই পণ্যগুলো sale করছি, আমরা সব সময় আমাদের প্রোডাক্টের গুণগতমান অক্ষুন্ন রাখতে কাজ করছ\r\nদক্ষ কারিগরদের দ্বারা পণ্যগুলো প্রস্তুত করি, তাই আমাদের প্রতিটি পণ্যর ফিনিশিং খুবই ভালো মানের হয়ে থাকে\r\nআমাদের প্রতিটি পন্য ছবির সাথে মিলবে কে প্রস্তুত করা হয়। তাই আপনারা নির্ভরযোগ্য ভাবে অর্ডার করতে পারেন । ছবির অনুরূপ সঠিক প্রোডাক্টটি আপনাদের কাছে পৌঁছানো হবে।",
+    "sizes": "[]",
+    "tags": ["Three-Piece set", "All Seasons"],
+    "postedAt": "2025-03-10T19:07:18.604Z",
+    "rating": 4.5,
+    "price": 980,
+    "stock": 10,
+    "discount": 10,
+    "category": {
+      "label": "Womens Shopping",
+      "href": "womens-shopping",
+      "subcategory": {
+        "label": "dresses",
+        "href": "womens-shopping/dresses"
+      }
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/70a5cc499a514d3cd12a7243b478b2f6_48DA651-5.jpg",
+      "https://ik.imagekit.io/5vsgfneca/ef8bb3104ddd16f2b89b7366463ec127_YfIn5ndcf.jpg"
+    ]
+  },
+  {
+    "title": "premium-cotton-full-sleeve-casual-shirt-for-men",
+    "description": "Product details of Premium Cotton Full Sleeve Casual Shirt For Men\r\nProduct Type: Casual Shirt\r\nMain Material: Cotton\r\nGender: Men\r\nStylish and fashionable\r\nPerfect Fitting\r\nCollection for Men\r\nComfortable to wear\r\nPerfect for any Occasion\r\nSize M L XL XXLM-length;28.''chest;39''L- length: 29\", chest; 41''XL-length: 30\", chest; 43'\r\nProduct Type: Casual Shirt\r\nMain Material: Cotton\r\nGender: Men\r\nStylish and fashionable\r\nPerfect Fitting\r\nCollection for Men\r\nComfortable to wear\r\nPerfect for any Occasion\r\nSize M L XL XXLM-length;28.''chest;39''L- length: 29\", chest; 41''XL-length: 30\", chest; 43'",
+    "sizes": "[]",
+    "tags": ["Full Sleeve", "Casual Shirt", "Long Sleeve"],
+    "postedAt": "2025-03-10T18:53:01.612Z",
+    "rating": 4.5,
+    "price": 450,
+    "stock": 10,
+    "discount": 5,
+    "category": {
+      "label": "Mens Shopping",
+      "href": "mens-shopping",
+      "subcategory": {
+        "label": "shirts",
+        "href": "mens-shopping/shirts"
+      }
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/5e5c31fbd4c2ee7fc4edf767e301f489_2N-TVCOCo.jpg",
+      "https://ik.imagekit.io/5vsgfneca/6b654e9e60a4895a22afeb8571756919_rlbHW9on1.jpg",
+      "https://ik.imagekit.io/5vsgfneca/833aecc8c7a04d8a20a5fb3d846883ff_sstBPR7Ku.jpg",
+      "https://ik.imagekit.io/5vsgfneca/d019e81db5d0da027f9be0b753570655_bZ_yMo3gx.jpg",
+      "https://ik.imagekit.io/5vsgfneca/f4ee27aa639bd649706ec12279d652f3_xRK4Yw-fZ.jpg"
+    ]
+  },
+  {
+    "title": "trendy-and-fashionable-afsan-print-saree-for-women",
+    "description": "Product details of Trendy And Fashionable Afsan Print Saree for Women\r\nProduct Name : Afsan Print Saree\r\nMaterial Half Silk\r\nSize 12 Haat\r\nNo Blouse Piece with Saree\r\nTrendy Saree\r\nDry Wash",
+    "sizes": "[]",
+    "tags": ["Print Saree", ""],
+    "postedAt": "2025-03-10T19:19:37.950Z",
+    "price": 780,
+    "rating": 4.3,
+    "stock": 10,
+    "discount": 10,
+    "category": {
+      "label": "Womens Shopping",
+      "href": "womens-shopping",
+      "subcategory": {
+        "label": "saree",
+        "href": "womens-shopping/saree"
+      }
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/6cf2db7cb74cc03eb00a72481942c125_qNjArlR-f.jpg"
+    ]
+  },
+  {
+    "title": "new-fashionable-trendy-collection-2024-fit-gents-everyday-fashion-&-always-attire-export-pants---pant",
+    "description": "Product details of New Fashionable Trendy Collection 2024 Fit Gent'S Everyday Fashion & Always Attire Export Pants - Pant\r\n0\r\nProduct type :Men's/Boy's Pant\r\nMaterial : Denim\r\nQuality : Export\r\nGender : Men\r\nColour : As given picture\r\nFit : New Fashionable Trendy Collection 2024 Fit\r\nSmart & Stylish\r\nMade In Bangladesh\r\nAvailable Size :-\r\nSize : 28, 30, 32, 34, 36.",
+    "sizes": "[\"M\",\"L\",\"2XL\"]",
+    "tags": ["Export Pants"],
+    "postedAt": "2025-03-10T18:59:38.862Z",
+    "rating": 4.5,
+    "price": 500,
+    "stock": 10,
+    "discount": 0,
+    "category": {
+      "label": "Mens Shopping",
+      "href": "mens-shopping",
+      "subcategory": {
+        "label": "pants",
+        "href": "mens-shopping/pants"
+      }
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/6110a701d63f705b10552cccf608cf68_dtQrnBDfH.jpg"
+    ]
+  },
+  {
+    "title": "slim-fit-gents-everyday-fashion-&-always-attire-export-pants",
+    "description": "Product details of Slim Fit Gent's Everyday Fashion & Always Attire Export Pants\r\nProduct type :Men's/Boy's Pant\r\nMaterial : Denim\r\nQuality : Export\r\nGender : Men\r\nColour : As given picture\r\nFit : Slim Fit\r\nSmart & Stylish\r\nMade In Bangladesh\r\nAvailable Size :-\r\nSize : 28, 30, 32, 34, 36.\r\nProduct type :Men's/Boy's Pant\r\nMaterial : Denim\r\nQuality : Export\r\nGender : Men\r\nColour : As given picture\r\nFit : Slim Fit\r\nSmart & Stylish\r\nMade In Bangladesh\r\nAvailable Size :-\r\nSize : 28, 30, 32, 34, 36.",
+    "sizes": "[\"M\",\"L\",\"XL\"]",
+    "tags": ["Export Pants"],
+    "postedAt": "2025-03-10T18:58:55.378Z",
+    "rating": 4.5,
+    "price": 450,
+    "stock": 10,
+    "discount": 5,
+    "category": {
+      "label": "Mens Shopping",
+      "href": "mens-shopping",
+      "subcategory": {
+        "label": "pants",
+        "href": "mens-shopping/pants"
+      }
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/ad5a1106639cc5ec7f3a7d5cc47d75b5_NHHif3eGd.jpg"
+    ]
+  },
+  {
+    "title": "mens-fashionable-exclusive-sneakers-converse-shoe-for-men",
+    "description": "Product details of Mens Fashionable Exclusive Sneakers Converse shoe for Men\r\nSneaker for men.\r\nShoes for men.\r\nSummer sneaker.\r\nSummer shoes for men.\r\nshoes for men 2024\r\nRunning shoes\r\nCasual shoes\r\nSports breathable shoes\r\ngym shoes for men\r\nwalking shoes\r\n#ShoesForMen",
+    "sizes": "[\"L\",\"XL\",\"2XL\"]",
+    "tags": ["Sneakers", "shoe for Men", "red"],
+    "postedAt": "2025-03-10T19:10:57.388Z",
+    "rating": 4.5,
+    "price": 780,
+    "stock": 10,
+    "discount": 10,
+    "category": {
+      "label": "Mens Shopping",
+      "href": "mens-shopping",
+
+      "subcategory": {
+        "label": "shoes",
+        "href": "mens-shopping/shoes"
+      }
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/170d091b5a33654d2eebdda65641d7b3_irunA4Wsb.jpg"
+    ]
+  },
+  {
+    "title": "earings-fashion-jewelry-sweet-and-cute-peach-heart-crystal-tassel-earrings-for-women-elegant-glamour-valentines-day-gift",
+    "description": "Product details of Earings Fashion Jewelry Sweet And Cute Peach Heart Crystal Tassel Earrings For Women Elegant Glamour Valentines Day Gift\r\nMaterial: Metal\r\nMetals Type: Zinc alloy\r\nOrigin: CN(Origin)\r\nModel Number: 108\r\nItem Type: Earrings\r\nStyle: Cute/Romantic\r\nEarring Type: Drop Earrings\r\nShape\\pattern: Heart\r\nFine or Fashion: Fashion\r\nGender: Women\r\nModelling: Geometric Type\r\nStyle: Ladies· Type: Earrings",
+    "sizes": "[]",
+    "tags": ["Earrings", "Gift"],
+    "postedAt": "2025-03-10T19:14:32.630Z",
+    "price": 980,
+    "stock": 10,
+    "rating": 3.5,
+    "discount": 25,
+    "category": {
+      "label": "Womens Shopping",
+      "href": "womens-shopping",
+      "subcategory": {
+        "label": "jewelry",
+        "href": "womens-shopping/jewelry"
+      }
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/S37de5dea10be41b2b6c288d5a8e01fd6X_-Soq4VTjV.jpg",
+      "https://ik.imagekit.io/5vsgfneca/S82d299c89dd8440b881d623c3496094fV_dpUuW33B8.jpg",
+      "https://ik.imagekit.io/5vsgfneca/Sa35572337437433aa2b3a3038070790du_r8dR7JN3R.jpg",
+      "https://ik.imagekit.io/5vsgfneca/Sca88e3ad928e4239ae0c0fe8ae97edca8_N3NWCcDpV.jpg"
+    ]
+  },
+
+  {
+    "title": "new-stylish-women-high-quality-hijabi-long-dress---neck-design-3d-screen-print-gown-kurti---ideal-for-all-occasions-and-seasons",
+    "description": "Product details of New Stylish Women High-Quality Hijabi Long Dress - Neck Design 3D Screen Print Gown Kurti - Ideal for All Occasions and Seasons\r\nMain Material Linen Fabric 3D Screen Print\r\nProduct Type: One Pcs\r\nColor: Same As pic\r\nVery Nice And Comfortable\r\n100% Color Granti\r\nLong: 50/52\r\nBody (Chest Size) : ( 36 to 38= M) (40 to 42=XL) (44 to 46=XXL)\r\nGher :120\"\r\n1.It is made of high quality materials,durable enought for your daily wearing\r\n2.Great for party,Daily,Beach,I am sure you will like it!\r\n3.High quality dress, perfect for outdoor/party\r\n4.Perspective pants are perfect for cocktails\r\n5.Make you look very attractive and sexy\r\nProduct information:Gender:Women\r\nItem Type:Dress\r\nMaterial:Linen Fabric\r\nPattern Type:Printing\r\nStyle: Everyday,Beach,Sweet\r\nSleeve:Long Sleeve\r\nQuality: High-quality product (100% QC)\r\nPackage include: One Pcs Dress\r\nProduction By: AMR Garments\r\nMade in Bangladesh\r\nFor any question by Chat now.",
+    "sizes": "[]",
+    "tags": ["Screen Print", "Neck Design", "Hijabi"],
+    "postedAt": "2025-03-10T19:05:52.025Z",
+    "rating": 4.5,
+    "price": 650,
+    "stock": 10,
+    "discount": 10,
+    "category": {
+      "label": "Womens Shopping",
+      "href": "womens-shopping",
+      "subcategory": {
+        "label": "dresses",
+        "href": "womens-shopping/dresses"
+      }
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/0a456226a5059215cd313cd243114f6f_oXDt9T5uK.jpg",
+      "https://ik.imagekit.io/5vsgfneca/3d331f79cb7c6f4a47f2774a7d31665a_nY-UJlnQq.jpg",
+      "https://ik.imagekit.io/5vsgfneca/4a803fa2605f3e10ad819edee48ce026_UaxlePo3O.jpg",
+      "https://ik.imagekit.io/5vsgfneca/50014a359ff652b9f7b30bb31273e9e4_xdWXT2tOK.jpg"
+    ]
+  },
+  {
+    "title": "exclusive-design-tangail-skin-print-saree-without-blouse-piece-for-women",
+    "description": "Product details of Exclusive Design Tangail Skin Print Saree Without Blouse Piece For Women\r\nProduct Type : Saree\r\nMain material : Half Silk\r\nWithout Blouse Pcs\r\nDesign : According to Latest Trendy Pattern Followed\r\nOrigin : Tangail Saree\r\nMade : Bangladesh\r\nLong : 12.5 haat Sharee\r\nBohor : 46 inch\r\nOccasion : Casual , Party , Festival\r\nMade : All Over Heavy Handloom Work Followed by Trendy Pattern\r\nRich Fabric\r\nFashionable Attire\r\nQualityful Textures\r\nPerfect Fitting\r\nEasy to Wash\r\nAn Uncommon Present for the Extraordinary Individual\r\nBest Selling with Trendy Look Appearence Upwards\r\nVery Comfortable & Soft to Use Any Weather & Occasions",
+    "sizes": "[]",
+    "tags": ["Tangail Skin Print Saree", ""],
+    "postedAt": "2025-03-10T19:18:56.186Z",
+    "price": 1250,
+    "stock": 10,
+    "rating": 4.5,
+    "discount": 15,
+    "category": {
+      "label": "Womens Shopping",
+      "href": "womens-shopping",
+      "subcategory": {
+        "label": "saree",
+        "href": "womens-shopping/saree"
+      }
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/0d10f7d6776ffa77b54a08ae31df6795_1kQdgJAZV.jpg",
+      "https://ik.imagekit.io/5vsgfneca/9acaa4ed7a9ef27ac92fa3922f95e120_RzqnnYRXR.jpg",
+      "https://ik.imagekit.io/5vsgfneca/9acaa4ed7a9ef27ac92fa3922f95e120.jpg_2200x2200q80.jpg__YISuBPLhE.webp",
+      "https://ik.imagekit.io/5vsgfneca/703be70de17ed0721888511f8814bd41_du0E3wj4b.jpg",
+      "https://ik.imagekit.io/5vsgfneca/703be70de17ed0721888511f8814bd41.jpg_2200x2200q80.jpg__jpkxNiagm.webp"
+    ]
+  },
+  {
+    "title": "fashionable-crossbodyside-hand-bag-for-womengirls",
+    "description": "Product details of Fashionable crossbody/Side hand bag for women/Girls\r\nSize :L=10\" W=6\" H=6\"\r\nScratch-resistant Material: The material is scratch-resistant and the display bag is made of thick water-washed cloth material, which is scratch-resistant for daily use.\r\nLarge capacity: It can hold daily necessities such as folding umbrellas/long wallets/Makeup kit\r\nLightweight: Lightweight shoulder bag, you can carry daily necessities with you, without load, easy to play!\r\nHand strap design: The hand bag design is made of webbing, sewn with PU leather, and is comfortable to use.\r\n:L=10\" W=6\" H=6\"",
+    "sizes": "[\"L\",\"M\"]",
+    "tags": ["Side hand bag", "women/Girls BAGS"],
+    "postedAt": "2025-03-10T19:16:40.538Z",
+    "price": 980,
+    "stock": 10,
+    "rating": 4.5,
+    "discount": 32,
+    "category": {
+      "label": "Womens Shopping",
+      "href": "womens-shopping",
+      "subcategory": {
+        "label": "handbags",
+        "href": "womens-shopping/handbags"
+      }
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/74cbd7ae8c1dc62be707fa3e9b7256b5_vYtRQueYS.jpg",
+      "https://ik.imagekit.io/5vsgfneca/84d781fb53413cbccf8e23ec9c1f52c1_UgPF1FS0M.jpg",
+      "https://ik.imagekit.io/5vsgfneca/492d3deba1e06f2edda02b48e3e958e8_vPyB7VTYb.jpg",
+      "https://ik.imagekit.io/5vsgfneca/a00f6093090ce71c5b1ffaee120dccff_nr_Hm96sm.jpg",
+      "https://ik.imagekit.io/5vsgfneca/a00f6093090ce71c5b1ffaee120dccff.jpg_2200x2200q80.jpg__it4-MG5-E.webp"
+    ]
+  },
+  {
+    "title": "womens-fashion-summer-grace-mid-calf-long-sleeve-beach-china-fabric-printing-dress-in-yellow",
+    "description": "Product details of Women's Fashion Summer Grace Mid-Calf Long Sleeve Beach China Fabric Printing Dress in Yellow\r\nChina Linen Fabric Screen Print\r\nLong: 53\r\nBody Size : Free Size ( 34 to 38= XL) (40 to 44=XXL)\r\nGar 120\"\r\nGender:Women\r\nItem Type:Dress\r\nMaterial:Polyester fiber\r\nPattern Type:Printing\r\nStyle: Everyday,Beach,Sweet\r\nSleeve:Short Sleeve\r\nPackage include:1PC Dress",
+    "sizes": "[\"L\",\"XL\"]",
+    "tags": ["Summer Grace", "Printing Dress"],
+    "postedAt": "2025-03-10T19:04:33.224Z",
+    "rating": 4.5,
+    "price": 870,
+    "stock": 10,
+    "discount": 10,
+    "category": {
+      "label": "Womens Shopping",
+      "href": "womens-shopping",
+      "subcategory": {
+        "label": "dresses",
+        "href": "womens-shopping/dresses"
+      }
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/969d79923b4a8f6f23de664754360650_HmgkrSURT.jpg"
+    ]
+  },
+  {
+    "title": "premium-quality-long-sleeve-micro-stitch-shirt",
+    "description": "Product details of Premium Quality Long Sleeve Micro Stitch Shirt\r\n𝗣𝗿𝗲𝗺𝗶𝘂𝗺 Micro 𝗦𝘁𝗶𝘁𝗰𝗵 𝗙𝗮𝗯𝗿𝗶𝗰𝘀 𝗙𝗮𝗿𝗺𝗮𝗹 𝗦𝗵𝗶𝗿𝘁SpandexSolid PatternRegular FitVery comfortable & high qualityMachine Washable𝐒𝐢𝐳𝐞 𝐃𝐞𝐭𝐚𝐢𝐥𝐬: M, L, XL, M = Chest 40\", Length 28\"L = Chest 42\", Length 29\"XL = Chest 44\", Length 30\"XXL = Chest 46\", Length 31\"\r\n𝗣𝗿𝗲𝗺𝗶𝘂𝗺 Micro 𝗦𝘁𝗶𝘁𝗰𝗵 𝗙𝗮𝗯𝗿𝗶𝗰𝘀 𝗙𝗮𝗿𝗺𝗮𝗹 𝗦𝗵𝗶𝗿𝘁\r\n\r\n\r\nSpandex\r\nSolid Pattern\r\nRegular Fit\r\nVery comfortable & high quality\r\nMachine Washable\r\n𝐒𝐢𝐳𝐞 𝐃𝐞𝐭𝐚𝐢𝐥𝐬: M, L, XL, \r\n\r\nM = Chest 40\", Length 28\"\r\n\r\nL = Chest 42\", Length 29\"\r\n\r\nXL = Chest 44\", Length 30\"\r\n\r\nXXL = Chest 46\", Length 31\"",
+    "sizes": "[\"L\",\"XL\",\"M\"]",
+    "tags": ["Long Sleeve", "Micro Stitch"],
+    "postedAt": "2025-03-10T18:55:18.359Z",
+    "rating": 4.5,
+    "price": 450,
+    "stock": 10,
+    "discount": 10,
+    "category": {
+      "label": "Mens Shopping",
+      "href": "mens-shopping",
+      "subcategory": {
+        "label": "shirts",
+        "href": "mens-shopping/shirts"
+      }
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/9ad122148de0fe195d5efba9bb264186_7cuek3TivW.jpg",
+      "https://ik.imagekit.io/5vsgfneca/48cb03860fc98e54fba886430fbc9691_1cbFgQTGy.jpg",
+      "https://ik.imagekit.io/5vsgfneca/07944b1f2f2ddd45e5929230d60b1b5d_A7UX_b1zub.jpg",
+      "https://ik.imagekit.io/5vsgfneca/b52571021584e9db929bdac6242fb58d_3oB6ithRp.jpg"
+    ]
+  },
+  {
+    "title": "mens-stylish-&-fashionable-trendy-good-looking-long-sleeve-formal-shirt",
+    "description": "Product details of Men's Stylish & Fashionable Trendy Good Looking Long Sleeve Formal Shirt\r\nBand Name : CHANDNI FASHION (DK)\r\nFabrics : Men's Stylish & Fashionable Trendy Good Looking Long Sleeve Formal Shirt\r\nQuality: Export quality\r\nGender: Men\r\nFashionable & Slim Fit\r\nColor: As given picture\r\nSize: M, L, XL\r\nM- long: 29\", body: 40\"\r\nL- long: 30 \", body: 42\"\r\nXL- long: 31\", body: 44\"",
+    "sizes": "[\"M\",\"L\",\"XL\"]",
+    "tags": ["Formal Shirt", "Long Sleeve"],
+    "postedAt": "2025-03-10T18:50:03.325Z",
+    "rating": 4.5,
+    "price": 550,
+    "stock": 10,
+    "discount": 10,
+    "category": {
+      "label": "Mens Shopping",
+      "href": "mens-shopping",
+      "subcategory": {
+        "label": "shirts",
+        "href": "mens-shopping/shirts"
+      }
+    },
+    "images": [
+      "https://ik.imagekit.io/5vsgfneca/6f21695360a0e06db002b7a6738d1a27_ZZu0AYZ_w.jpg",
+      "https://ik.imagekit.io/5vsgfneca/766bca07a43d2594dafea576bf95b456_1SLQ7qUA9.jpg",
+      "https://ik.imagekit.io/5vsgfneca/0843cc4df4eafdef982514d42aea7235_t9FKwRNsl.jpg",
+      "https://ik.imagekit.io/5vsgfneca/0843cc4df4eafdef982514d42aea7235.jpg_2200x2200q80.jpg__Dr5dLV4Ub.webp"
     ]
   }
 ]
