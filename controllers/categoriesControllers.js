@@ -25,16 +25,14 @@ const getCategories = async (req, res) => {
   try {
     const { category } = req.query;
     console.log(category);
-
     if (category) {
       const result = await db
         .collection("categories")
-        .findOne({ label: category });
+        .findOne({ href: category });
 
       if (!result) {
         return res.status(404).json({ message: "Category not found" });
       }
-
       return res.json(result); // Return to stop further execution
     }
 
