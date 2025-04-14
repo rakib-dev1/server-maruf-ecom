@@ -64,7 +64,7 @@ const orderConfirmItems = async (req, res) => {
       totalPrice,
       products,
       deliveryCharge,
-      status: "pending",
+      status: "Pending",
       orderDate: new Date(),
     };
     console.log(orderItems);
@@ -79,6 +79,9 @@ const orderConfirmItems = async (req, res) => {
 const getOrders = async (req, res) => {
   try {
     const email = req.query.email;
+    if (!email) {
+      return res.status(400).json({ message: "Email is required" });
+    }
     console.log(req.query);
     const query = { "customerInfo.email": email };
     const orders = await db.collection("orders").find(query).toArray();

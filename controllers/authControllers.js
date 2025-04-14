@@ -7,42 +7,42 @@ const authLogin = async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    // Check if the user exists in the database
     const user = await db.collection("users").findOne({ email: email });
-
     if (!user) {
       return res.status(400).json({ message: "user not found" });
     }
 
-    // Compare the password with the hashed password in the database
     const isPasswordMatch = await bcrypt.compare(password, user.password);
     if (!isPasswordMatch) {
       return res.status(400).json({ message: "Invalid email or password" });
     }
 
-    // Create a JWT token with the user's details
     const token = jwt.sign(
-      { id: user._id, email: user.email, name: user.name },
+      {
+        id: user._id,
+        email: user.email,
+        name: user.name,
+        role: user.role, // Include role in token if needed
+      },
       process.env.JWT_SECRET_KEY,
       { expiresIn: "1h" }
     );
-
-    // Return the user object and token
+    console.log(user);
     res.json({
       message: "Login successful",
       user: {
         id: user._id,
         email: user.email,
         name: user.name,
+        role: user.role, // Include role in response
       },
-      token, // Send token to the user
+      token,
     });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Server error" });
   }
 };
-
 const authSignup = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -55,6 +55,7 @@ const authSignup = async (req, res) => {
     const user = {
       email,
       password: hashedPassword,
+      role: "user",
       createdAt: new Date(),
     };
     await db.collection("users").insertOne(user);
