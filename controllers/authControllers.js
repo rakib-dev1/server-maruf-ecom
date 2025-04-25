@@ -6,6 +6,7 @@ const bcrypt = require("bcryptjs");
 const authLogin = async (req, res) => {
   try {
     const { email, password } = req.body;
+    console.log(req.body);
 
     const user = await db.collection("users").findOne({ email: email });
     if (!user) {
@@ -34,7 +35,8 @@ const authLogin = async (req, res) => {
         id: user._id,
         email: user.email,
         name: user.name,
-        role: user.role, // Include role in response
+        role: user.role,
+        createdAt: user.createdAt,
       },
       token,
     });

@@ -18,7 +18,6 @@ const {
   sessionUser,
 } = require("../controllers/authControllers");
 const multer = require("multer");
-const protect = require("../middlewares/authMiddleware");
 const {
   addToCart,
   getCartItems,
@@ -26,12 +25,13 @@ const {
   orderConfirmItems,
   getOrders,
 } = require("../controllers/userControllers");
+const authMiddleware = require("../middlewares/authMiddleware");
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 const route = express.Router();
 route.get("/", (req, res) => res.send("Maruf Ecom Server is running..😘"));
 
-// get rout
+// get route
 route.get("/products/:title", getProducts);
 route.get("/products/", getProducts);
 route.get("/categories", getCategories);
@@ -40,7 +40,7 @@ route.get("/highlights", getHighLights);
 route.get("/cart", getCartItems);
 route.get("/search", searchTags);
 route.get("/recommend", getRecommendedProducts);
-route.get("/orders", getOrders);
+route.get("/orders", authMiddleware, getOrders);
 // post route
 route.post("/add-products", upload.array("images", 10), addNewProducts);
 route.post("/cart", addToCart);

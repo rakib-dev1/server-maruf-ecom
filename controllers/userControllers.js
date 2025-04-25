@@ -78,6 +78,7 @@ const orderConfirmItems = async (req, res) => {
 
 const getOrders = async (req, res) => {
   try {
+    console.log("order", req.query);
     const email = req.query.email;
     if (!email) {
       return res.status(400).json({ message: "Email is required" });
