@@ -6,7 +6,7 @@ module.exports = {
     const { Server } = require("socket.io");
     io = new Server(server, {
       cors: {
-        origin: "https://fmlio.com",
+        origin: "*",
         methods: ["GET", "POST"],
       },
     });
