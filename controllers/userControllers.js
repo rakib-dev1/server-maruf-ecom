@@ -1,5 +1,7 @@
 const { ObjectId } = require("mongodb");
 const { db } = require("../config/db");
+const { getIO } = require("../services/socket"); // <--- use getIO
+
 const addToCart = async (req, res) => {
   try {
     if (!req.body.email) {
@@ -57,7 +59,7 @@ const orderConfirmItems = async (req, res) => {
       deliveryCharge,
       products,
     } = req.body;
-    console.log(req.body);
+
     const orderItems = {
       customerInfo,
       paymentMethod,
@@ -67,11 +69,19 @@ const orderConfirmItems = async (req, res) => {
       status: "Pending",
       orderDate: new Date(),
     };
-    console.log(orderItems);
+
     const result = await db.collection("orders").insertOne(orderItems);
+
+    // Emit a real-time notification to all connected clients
+    const io = getIO();
+    io.emit("orderConfirmed", {
+      message: "Order confirmed successfully!",
+      order: orderItems,
+    });
+
     res.send(result);
   } catch (error) {
-    console.error("Error fetching products:", error);
+    console.error("Error confirming order:", error);
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
