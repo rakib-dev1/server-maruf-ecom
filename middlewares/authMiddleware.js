@@ -17,4 +17,19 @@ const authMiddleware = (req, res, next) => {
   }
 };
 
-module.exports = authMiddleware;
+const verifyAdmin = (req, res, next) => {
+  try {
+    
+    const user = req.user;
+    if (user && user.role === "admin") {
+      next(); 
+    } else {
+      return res.status(403).json({ message: "Access denied. Admins only." });
+    }
+  } catch (error) {
+    console.error("Error verifying admin:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
+
+module.exports = { authMiddleware, verifyAdmin };

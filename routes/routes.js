@@ -11,7 +11,10 @@ const {
   getCategories,
   addNewCategory,
 } = require("../controllers/categoriesControllers");
-
+const {
+  authMiddleware,
+  verifyAdmin,
+} = require("../middlewares/authMiddleware");
 const {
   authLogin,
   authSignup,
@@ -25,7 +28,7 @@ const {
   orderConfirmItems,
   getOrders,
 } = require("../controllers/userControllers");
-const authMiddleware = require("../middlewares/authMiddleware");
+
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 const route = express.Router();
@@ -42,7 +45,13 @@ route.get("/search", searchTags);
 route.get("/recommend", getRecommendedProducts);
 route.get("/orders", authMiddleware, getOrders);
 // post route
-route.post("/add-products", upload.array("images", 10), addNewProducts);
+route.post(
+  "/add-products",
+  authMiddleware,
+  verifyAdmin,
+  upload.array("images", 10),
+  addNewProducts
+);
 route.post("/cart", addToCart);
 route.post("/categories", addNewCategory);
 route.post("/order", orderConfirmItems);
