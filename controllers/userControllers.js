@@ -132,38 +132,59 @@ const getUser = async (req, res) => {
 };
 const updateUser = async (req, res) => {
   try {
-    const { email, name, phone } = req.body;
+    const {
+      oldEmail,
+      email,
+      name,
+      phone,
+      street1,
+      street2,
+      city,
+      state,
+      zip,
+      country,
+    } = req.body;
+    console.log(req.body);
     const imageFile = req.file;
-    const existingUser = await db.collection("users").findOne({ email: email });
-    console.log("Existing user:", existingUser);
+    const existingUser = await db
+      .collection("users")
+      .findOne({ email: oldEmail });
     if (!existingUser) {
       return res.status(404).json({ message: "User not found" });
     }
-    let imageUrl = existingUser.image || [];
-    const uploadedImage = await imagekit.upload({
-      file: imageFile.buffer.toString("base64"),
-      fileName: imageFile.originalname,
-    });
-    imageUrl.push(uploadedImage.url);
-    console.log(imageUrl);
+
+    let imageUrl = [];
+    if (imageFile) {
+      const uploadedImage = await imagekit.upload({
+        file: imageFile.buffer.toString("base64"),
+        fileName: imageFile.originalname,
+      });
+      imageUrl.push(uploadedImage.url);
+    }
     const address = {
-      street1: req.body["address.street1"],
-      street2: req.body["address.street2"],
-      city: req.body["address.city"],
-      state: req.body["address.state"],
-      zip: req.body["address.zip"],
-      country: req.body["address.country"],
+      street1,
+      street2,
+      city,
+      state,
+      zip,
+      country,
     };
     const updatedUser = {
       name,
-      email,
+      email,  
+      password: existingUser.password,
       phone,
-      image: imageUrl,
-      address: address,
+      ...(imageUrl.length > 0 && { image: imageUrl[0] }),
+      address,
+      updateAt: new Date(),
     };
-    const result = await db
-      .collection("users")
-      .updateOne({ email: email }, { $set: updatedUser });
+
+    const result = await db.collection("users").updateOne(
+      { email: oldEmail },
+      { $set: updatedUser },
+      { upsert: true } // If no document matches, insert a new one
+    );
+
     res.send(result);
   } catch (err) {
     console.error(err);

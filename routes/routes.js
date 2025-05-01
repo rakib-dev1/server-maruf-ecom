@@ -67,6 +67,6 @@ route.post("/auth/session", sessionUser);
 // delete route
 route.delete("/cart", removeCartItems);
 // patch route
-route.patch("/update-user", upload.single("image"), updateUser);
+route.patch("/update-user", authMiddleware, upload.single("image"), updateUser);
 
 module.exports = route;
