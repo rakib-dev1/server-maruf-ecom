@@ -19,10 +19,9 @@ const authMiddleware = (req, res, next) => {
 
 const verifyAdmin = (req, res, next) => {
   try {
-    
     const user = req.user;
     if (user && user.role === "admin") {
-      next(); 
+      next();
     } else {
       return res.status(403).json({ message: "Access denied. Admins only." });
     }

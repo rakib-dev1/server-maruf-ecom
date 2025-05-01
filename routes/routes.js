@@ -27,6 +27,8 @@ const {
   removeCartItems,
   orderConfirmItems,
   getOrders,
+  getUser,
+  updateUser,
 } = require("../controllers/userControllers");
 
 const storage = multer.memoryStorage();
@@ -44,6 +46,7 @@ route.get("/cart", getCartItems);
 route.get("/search", searchTags);
 route.get("/recommend", getRecommendedProducts);
 route.get("/orders", authMiddleware, getOrders);
+route.get("/users", authMiddleware, getUser);
 // post route
 route.post(
   "/add-products",
@@ -63,5 +66,7 @@ route.post("/auth/session", sessionUser);
 
 // delete route
 route.delete("/cart", removeCartItems);
+// patch route
+route.patch("/update-user", upload.single("image"), updateUser);
 
 module.exports = route;

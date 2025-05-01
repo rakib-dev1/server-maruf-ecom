@@ -120,7 +120,7 @@ const getProducts = async (req, res) => {
     let filter = {};
 
     if (title) {
-      filter.title = title;
+      filter.title = { $regex: new RegExp(title, "i") };
     }
 
     if (tags) {
@@ -153,7 +153,11 @@ const getProducts = async (req, res) => {
       filter.color = { $regex: new RegExp(`^${color}$`, "i") }; // Case-insensitive color match
     }
 
-    const products = await db.collection("products").find(filter).toArray();
+    const products = await db
+      .collection("products")
+      .find(filter)
+      .sort({ postedAt: -1 }) // Sort by latest products
+      .toArray();
 
     res.status(200).json({ success: true, data: products });
   } catch (error) {
@@ -215,11 +219,14 @@ const searchTags = async (req, res) => {
       return res.status(400).json({ message: "Query parameter is required" });
     }
 
-    // Find products where tags contain the query (case-insensitive search)
+    // Find products where tags or title contain the query (case-insensitive search)
     const searchResults = await db
       .collection("products")
       .find({
-        tags: { $elemMatch: { $regex: query, $options: "i" } },
+        $or: [
+          { tags: { $elemMatch: { $regex: query, $options: "i" } } },
+          { title: { $regex: query, $options: "i" } },
+        ],
       })
       .toArray();
 
@@ -227,11 +234,15 @@ const searchTags = async (req, res) => {
       return res.status(404).json({ message: "No products found" });
     }
 
-    // Extract matching tag names
+    // Extract matching tag names and titles
     const matchingTags = [];
+    const matchingTitles = [];
 
-    // Loop through products and collect matching tags
+    // Loop through products and collect matching tags and titles
     searchResults.forEach((product) => {
+      if (product.title.toLowerCase().includes(query.toLowerCase())) {
+        matchingTitles.push(product.title); // Add the title to the array
+      }
       product.tags.forEach((tag) => {
         if (tag.toLowerCase().includes(query.toLowerCase())) {
           matchingTags.push(tag); // Add the tag to the array
@@ -239,11 +250,12 @@ const searchTags = async (req, res) => {
       });
     });
 
-    // Remove duplicates by converting the array to a Set
+    // Remove duplicates by converting the arrays to Sets
     const uniqueTags = [...new Set(matchingTags)];
+    const uniqueTitles = [...new Set(matchingTitles)];
 
-    // Sort unique tags based on the first occurrence of the query and then alphabetically
-    uniqueTags.sort((a, b) => {
+    // Sort unique tags and titles based on the first occurrence of the query and then alphabetically
+    const sortByQueryMatch = (a, b) => {
       const aIndex = a.toLowerCase().indexOf(query.toLowerCase());
       const bIndex = b.toLowerCase().indexOf(query.toLowerCase());
 
@@ -253,10 +265,13 @@ const searchTags = async (req, res) => {
         return a.localeCompare(b);
       }
       return aIndex - bIndex; // Ascending order based on the first match
-    });
+    };
 
-    // Return the sorted unique matching tags
-    res.json({ matchingTags: uniqueTags });
+    uniqueTags.sort(sortByQueryMatch);
+    uniqueTitles.sort(sortByQueryMatch);
+
+    // Return the sorted unique matching tags and titles
+    res.json({ matchingTags: uniqueTags, matchingTitles: uniqueTitles });
   } catch (error) {
     console.error("Error searching products:", error);
     res.status(500).json({ message: "Internal Server Error" });

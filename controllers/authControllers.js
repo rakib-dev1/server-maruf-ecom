@@ -78,6 +78,7 @@ const sessionUser = async (req, res) => {
     const user = {
       email: email,
       name: name,
+      role: "user",
       createdAt: new Date(),
     };
     const result = await db.collection("users").insertOne(user);
@@ -88,4 +89,7 @@ const sessionUser = async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 };
+
+
+
 module.exports = { authLogin, authSignup, sessionUser };

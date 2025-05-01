@@ -1,6 +1,16 @@
 const { ObjectId } = require("mongodb");
 const { db } = require("../config/db");
-const { getIO } = require("../services/socket"); // <--- use getIO
+const { getIO } = require("../services/socket");
+const multer = require("multer");
+const storage = multer.memoryStorage(); // Or use diskStorage if you prefer
+const upload = multer({ storage });
+const ImageKit = require("imagekit");
+
+const imagekit = new ImageKit({
+  publicKey: process.env.IMAGEKIT_PUBLIC_KEY,
+  privateKey: process.env.IMAGEKIT_PRIVATE_KEY,
+  urlEndpoint: process.env.IMAGEKIT_URL_ENDPOINT,
+});
 
 const addToCart = async (req, res) => {
   try {
@@ -102,6 +112,64 @@ const getOrders = async (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
+const getUser = async (req, res) => {
+  try {
+    const email = req.query.email;
+    console.log("form user:", email);
+    if (!email) {
+      return res.status(400).json({ message: "Email is required" });
+    }
+    const query = { email: email };
+    const user = await db.collection("users").findOne(query);
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+    res.send(user);
+  } catch (error) {
+    console.error("Error fetching products:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
+const updateUser = async (req, res) => {
+  try {
+    const { email, name, phone } = req.body;
+    const imageFile = req.file;
+    const existingUser = await db.collection("users").findOne({ email: email });
+    console.log("Existing user:", existingUser);
+    if (!existingUser) {
+      return res.status(404).json({ message: "User not found" });
+    }
+    let imageUrl = existingUser.image || [];
+    const uploadedImage = await imagekit.upload({
+      file: imageFile.buffer.toString("base64"),
+      fileName: imageFile.originalname,
+    });
+    imageUrl.push(uploadedImage.url);
+    console.log(imageUrl);
+    const address = {
+      street1: req.body["address.street1"],
+      street2: req.body["address.street2"],
+      city: req.body["address.city"],
+      state: req.body["address.state"],
+      zip: req.body["address.zip"],
+      country: req.body["address.country"],
+    };
+    const updatedUser = {
+      name,
+      email,
+      phone,
+      image: imageUrl,
+      address: address,
+    };
+    const result = await db
+      .collection("users")
+      .updateOne({ email: email }, { $set: updatedUser });
+    res.send(result);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Server error" });
+  }
+};
 
 module.exports = {
   addToCart,
@@ -109,4 +177,6 @@ module.exports = {
   removeCartItems,
   orderConfirmItems,
   getOrders,
+  getUser,
+  updateUser,
 };
