@@ -6,7 +6,7 @@ const bcrypt = require("bcryptjs");
 const authLogin = async (req, res) => {
   try {
     const { email, password } = req.body;
-    console.log(req.body);
+   
 
     const user = await db.collection("users").findOne({ email: email });
     if (!user) {
@@ -28,7 +28,7 @@ const authLogin = async (req, res) => {
       process.env.JWT_SECRET_KEY,
       { expiresIn: "1h" }
     );
-    console.log(user);
+    
     res.json({
       message: "Login successful",
       user: {

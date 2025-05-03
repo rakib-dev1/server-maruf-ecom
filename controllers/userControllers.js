@@ -18,7 +18,7 @@ const addToCart = async (req, res) => {
       return res.status(400).json({ message: "Email is required" });
     }
     const { title, price, images, email, quantity } = req.body;
-    console.log(req.body.images);
+    
 
     const cartItems = {
       title,
@@ -50,7 +50,7 @@ const getCartItems = async (req, res) => {
 const removeCartItems = async (req, res) => {
   try {
     const id = req.query.item;
-    console.log(id);
+ 
     const query = { _id: new ObjectId(id) };
     const cartItems = await db.collection("cart").deleteOne(query);
     res.send(cartItems);
@@ -98,7 +98,6 @@ const orderConfirmItems = async (req, res) => {
 
 const getOrders = async (req, res) => {
   try {
-    console.log("order", req.query);
     const email = req.query.email;
     let query = {};
     if (email) {
@@ -118,7 +117,7 @@ const getOrders = async (req, res) => {
 const getOrderDetails = async (req, res) => {
   try {
     const orderId = req.params.id;
-    console.log("order", orderId);
+
     if (!orderId) {
       return res.status(400).json({ message: "Order ID is required" });
     }
@@ -136,7 +135,6 @@ const getOrderDetails = async (req, res) => {
 const getUser = async (req, res) => {
   try {
     const email = req.query.email;
-    console.log("form user:", email);
     if (!email) {
       return res.status(400).json({ message: "Email is required" });
     }
@@ -165,7 +163,6 @@ const updateUser = async (req, res) => {
       zip,
       country,
     } = req.body;
-    console.log(req.body);
     const imageFile = req.file;
     const existingUser = await db
       .collection("users")

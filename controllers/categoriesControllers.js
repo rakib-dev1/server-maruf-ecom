@@ -24,7 +24,6 @@ const { db } = require("../config/db");
 const getCategories = async (req, res) => {
   try {
     const { category } = req.query;
-    console.log(category);
     if (category) {
       const result = await db
         .collection("categories")

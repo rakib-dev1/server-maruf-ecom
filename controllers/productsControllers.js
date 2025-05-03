@@ -115,8 +115,7 @@ const getProducts = async (req, res) => {
   try {
     const { title } = req.params;
     const { tags, category, subcategory, maxPrice, rating, color } = req.query;
-    console.log(title, tags, category, subcategory, maxPrice, rating, color);
-    console.log(req.query);
+ 
     let filter = {};
 
     if (title) {
@@ -170,7 +169,7 @@ const getProducts = async (req, res) => {
 const getHighLights = async (req, res) => {
   try {
     const { category } = req.query;
-    console.log(category);
+  
     const highlights = await db
       .collection("highlight")
       .find({ category: category })
@@ -213,7 +212,7 @@ const getFeaturedProducts = async (req, res) => {
 const searchTags = async (req, res) => {
   try {
     const { query } = req.query;
-    console.log(query);
+    
 
     if (!query) {
       return res.status(400).json({ message: "Query parameter is required" });
