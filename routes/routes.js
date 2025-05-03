@@ -19,6 +19,7 @@ const {
   authLogin,
   authSignup,
   sessionUser,
+  GoogleUser,
 } = require("../controllers/authControllers");
 const multer = require("multer");
 const {
@@ -29,6 +30,7 @@ const {
   getOrders,
   getUser,
   updateUser,
+  getOrderDetails,
 } = require("../controllers/userControllers");
 
 const storage = multer.memoryStorage();
@@ -46,6 +48,7 @@ route.get("/cart", getCartItems);
 route.get("/search", searchTags);
 route.get("/recommend", getRecommendedProducts);
 route.get("/orders", authMiddleware, getOrders);
+route.get("/order-details/:id", authMiddleware, verifyAdmin, getOrderDetails);
 route.get("/users", authMiddleware, getUser);
 // post route
 route.post(
@@ -62,7 +65,7 @@ route.post("/order", orderConfirmItems);
 //auth route
 route.post("/auth/login", authLogin);
 route.post("/auth/signup", authSignup);
-route.post("/auth/session", sessionUser);
+route.post("/auth/google", GoogleUser);
 
 // delete route
 route.delete("/cart", removeCartItems);

@@ -67,29 +67,47 @@ const authSignup = async (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
-const sessionUser = async (req, res) => {
+const GoogleUser = async (req, res) => {
   try {
-    const { email, name } = req.body;
-    console.log(req.body);
-    const existingUser = await db.collection("users").findOne({ email: email });
-    if (existingUser) {
-      return res.status(400).json({ message: "Email already exists" });
+    const { email, image, name } = req.body;
+    let user = await db.collection("users").findOne({ email: email });
+    if (!user) {
+      user = {
+        email: email,
+        name: name,
+        image: image,
+        role: "user",
+        createdAt: new Date(),
+      };
+      const result = await db.collection("users").insertOne(user);
+      user._id = result.insertedId;
     }
-    const user = {
-      email: email,
-      name: name,
-      role: "user",
-      createdAt: new Date(),
-    };
-    const result = await db.collection("users").insertOne(user);
-    console.log(result);
-    res.send(result);
+    const token = jwt.sign(
+      {
+        id: user._id,
+        email: user.email,
+        role: user.role,
+        name: user.name,
+      },
+      process.env.JWT_SECRET_KEY,
+      { expiresIn: "1h" }
+    );
+
+    res.json({
+      message: "Login successful",
+      user: {
+        id: user._id,
+        email: user.email,
+        name: user.name,
+        role: user.role,
+        createdAt: user.createdAt,
+      },
+      token,
+    });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Server error" });
   }
 };
 
-
-
-module.exports = { authLogin, authSignup, sessionUser };
+module.exports = { authLogin, authSignup, GoogleUser };

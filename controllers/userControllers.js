@@ -100,13 +100,34 @@ const getOrders = async (req, res) => {
   try {
     console.log("order", req.query);
     const email = req.query.email;
-    if (!email) {
-      return res.status(400).json({ message: "Email is required" });
+    let query = {};
+    if (email) {
+      query = { "customerInfo.email": email };
     }
-    console.log(req.query);
-    const query = { "customerInfo.email": email };
-    const orders = await db.collection("orders").find(query).toArray();
+    const orders = await db
+      .collection("orders")
+      .find(query)
+      .sort({ orderDate: -1 })
+      .toArray();
     res.send(orders);
+  } catch (error) {
+    console.error("Error fetching products:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
+const getOrderDetails = async (req, res) => {
+  try {
+    const orderId = req.params.id;
+    console.log("order", orderId);
+    if (!orderId) {
+      return res.status(400).json({ message: "Order ID is required" });
+    }
+    const query = { _id: new ObjectId(orderId) };
+    const orderDetails = await db.collection("orders").findOne(query);
+    if (!orderDetails) {
+      return res.status(404).json({ message: "Order not found" });
+    }
+    res.send(orderDetails);
   } catch (error) {
     console.error("Error fetching products:", error);
     res.status(500).json({ message: "Internal Server Error" });
@@ -171,7 +192,7 @@ const updateUser = async (req, res) => {
     };
     const updatedUser = {
       name,
-      email,  
+      email,
       password: existingUser.password,
       phone,
       ...(imageUrl.length > 0 && { image: imageUrl[0] }),
@@ -200,4 +221,5 @@ module.exports = {
   getOrders,
   getUser,
   updateUser,
+  getOrderDetails,
 };
