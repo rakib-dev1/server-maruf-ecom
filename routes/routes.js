@@ -6,6 +6,7 @@ const {
   addNewProducts,
   getRecommendedProducts,
   searchTags,
+  postReview,
 } = require("../controllers/productsControllers");
 const {
   getCategories,
@@ -61,6 +62,7 @@ route.post(
 route.post("/cart", addToCart);
 route.post("/categories", addNewCategory);
 route.post("/order", orderConfirmItems);
+route.post('/review-post',postReview);
 
 //auth route
 route.post("/auth/login", authLogin);

@@ -69,53 +69,16 @@ const addNewProducts = async (req, res) => {
   }
 };
 
-// const getProducts = async (req, res) => {
 //   //! single product api working api?title=Shoe
 //   //! tags query api working api?tags=Shoe For Women,red
 //   //! category and subcategory api working api?category=shoes&subcategory=sneakers
 //   //! only category api working api?category=shoes
 
-//   try {
-//     const { title } = req.params;
-//     const { tags, category, subcategory } = req.query;
-//     console.log(title, tags, category, subcategory);
-
-//     let filter = {};
-
-//     if (title) {
-//       filter.title = title;
-//     }
-
-//     if (tags) {
-//       const tagsArray = tags.split(",").map((tag) => tag.trim());
-//       filter.$or = tagsArray.map((tag) => ({
-//         tags: { $regex: new RegExp(`^${tag}$`, "i") }, // Case-insensitive match
-//       }));
-//     }
-
-//     if (category) {
-//       filter["category.href"] = category;
-//     }
-
-//     if (subcategory) {
-//       filter["category.subcategory.label"] = subcategory;
-//     }
-
-//     const products = await db.collection("products").find(filter).toArray();
-
-//     res.status(200).json({ success: true, data: products });
-//   } catch (error) {
-//     res
-//       .status(500)
-//       .json({ success: false, message: "Server Error", error: error.message });
-//   }
-// };
-
 const getProducts = async (req, res) => {
   try {
     const { title } = req.params;
     const { tags, category, subcategory, maxPrice, rating, color } = req.query;
- 
+
     let filter = {};
 
     if (title) {
@@ -125,7 +88,7 @@ const getProducts = async (req, res) => {
     if (tags) {
       const tagsArray = tags.split(",").map((tag) => tag.trim());
       filter.$or = tagsArray.map((tag) => ({
-        tags: { $regex: new RegExp(`^${tag}$`, "i") }, // Case-insensitive match
+        tags: { $regex: new RegExp(`^${tag}$`, "i") },
       }));
     }
 
@@ -137,25 +100,53 @@ const getProducts = async (req, res) => {
       filter["category.subcategory.label"] = subcategory;
     }
 
-    // Price Range Filter
     if (maxPrice) {
       filter.price = { $lte: parseFloat(maxPrice) };
     }
 
-    // Rating Filter
     if (rating) {
-      filter.rating = { $gte: parseFloat(rating) }; // Get products with rating >= selected rating
+      filter.rating = { $gte: parseFloat(rating) };
     }
 
-    // Color Filter
     if (color && color !== "all") {
-      filter.color = { $regex: new RegExp(`^${color}$`, "i") }; // Case-insensitive color match
+      filter.color = { $regex: new RegExp(`^${color}$`, "i") };
     }
 
     const products = await db
       .collection("products")
-      .find(filter)
-      .sort({ postedAt: -1 }) // Sort by latest products
+      .aggregate([
+        { $match: filter },
+        { $sort: { postedAt: -1 } },
+        {
+          $addFields: {
+            _idStr: { $toString: "$_id" },
+          },
+        },
+        {
+          $lookup: {
+            from: "reviews",
+            localField: "_idStr",
+            foreignField: "productId",
+            as: "reviews",
+          },
+        },
+        {
+          $addFields: {
+            averageRating: {
+              $cond: [
+                { $gt: [{ $size: "$reviews" }, 0] },
+                { $round: [{ $avg: "$reviews.rating" }, 2] },
+                null,
+              ],
+            },
+          },
+        },
+        {
+          $project: {
+            _idStr: 0,
+          },
+        },
+      ])
       .toArray();
 
     res.status(200).json({ success: true, data: products });
@@ -169,7 +160,7 @@ const getProducts = async (req, res) => {
 const getHighLights = async (req, res) => {
   try {
     const { category } = req.query;
-  
+
     const highlights = await db
       .collection("highlight")
       .find({ category: category })
@@ -212,7 +203,6 @@ const getFeaturedProducts = async (req, res) => {
 const searchTags = async (req, res) => {
   try {
     const { query } = req.query;
-    
 
     if (!query) {
       return res.status(400).json({ message: "Query parameter is required" });
@@ -299,6 +289,26 @@ const getRecommendedProducts = async (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
+const postReview = async (req, res) => {
+  // TODO: Image upload using imagekit DUE
+  try {
+    console.log("Review data:", req.body);
+    const { productId, rating, review, email, name } = req.body;
+    const reviewData = {
+      productId,
+      rating,
+      userName: name,
+      email,
+      review,
+      postedAt: new Date(),
+    };
+    const result = await db.collection("reviews").insertOne(reviewData);
+    res.status(201).json({ message: "Review added successfully", result });
+  } catch (error) {
+    console.error("Error adding review:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
 
 module.exports = {
   getProducts,
@@ -307,4 +317,5 @@ module.exports = {
   addNewProducts,
   searchTags,
   getRecommendedProducts,
+  postReview,
 };
