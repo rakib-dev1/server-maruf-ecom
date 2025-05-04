@@ -62,7 +62,12 @@ route.post(
 route.post("/cart", addToCart);
 route.post("/categories", addNewCategory);
 route.post("/order", orderConfirmItems);
-route.post('/review-post',postReview);
+route.post(
+  "/review-post",
+  authMiddleware,
+  upload.array("images", 5),
+  postReview
+);
 
 //auth route
 route.post("/auth/login", authLogin);

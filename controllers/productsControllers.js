@@ -290,18 +290,30 @@ const getRecommendedProducts = async (req, res) => {
   }
 };
 const postReview = async (req, res) => {
-  // TODO: Image upload using imagekit DUE
   try {
-    console.log("Review data:", req.body);
-    const { productId, rating, review, email, name } = req.body;
+    console.log("Request body:", req.body);
+    const { userName, userEmail, productId, review, rating } = req.body;
+    const files = req.files;
+    let imageUrls = [];
+    for (const file of files) {
+      const uploadedImage = await imagekit.upload({
+        file: file.buffer.toString("base64"),
+        fileName: file.originalname,
+      });
+
+      imageUrls.push(uploadedImage.url);
+    }
     const reviewData = {
       productId,
-      rating,
-      userName: name,
-      email,
+      rating: parseInt(rating),
+      userName,
+      userEmail,
       review,
+      images: imageUrls,
       postedAt: new Date(),
     };
+    console.log("Review data:", reviewData);
+
     const result = await db.collection("reviews").insertOne(reviewData);
     res.status(201).json({ message: "Review added successfully", result });
   } catch (error) {
@@ -309,7 +321,6 @@ const postReview = async (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
-
 module.exports = {
   getProducts,
   getFeaturedProducts,
