@@ -64,10 +64,19 @@ const orderConfirmItems = async (req, res) => {
     const {
       customerInfo,
       paymentMethod,
+      paymentNumber,
+      paymentGateway,
+      trxid,
       totalPrice,
       deliveryCharge,
       products,
     } = req.body;
+    const existingTRXID = await db
+      .collection("orders")
+      .findOne({ trxid: trxid });
+    if (existingTRXID) {
+      return res.status(400).json({ message: "Transaction ID already exists" });
+    }
 
     const orderItems = {
       customerInfo,
