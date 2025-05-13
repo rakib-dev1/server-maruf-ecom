@@ -33,6 +33,7 @@ const {
   updateUser,
   getOrderDetails,
 } = require("../controllers/userControllers");
+const { updateDeliveryStatus } = require("../controllers/adminControllers");
 
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
@@ -74,9 +75,10 @@ route.post("/auth/login", authLogin);
 route.post("/auth/signup", authSignup);
 route.post("/auth/google", GoogleUser);
 
-// delete route
-route.delete("/cart", removeCartItems);
 // patch route
 route.patch("/update-user", authMiddleware, upload.single("image"), updateUser);
+route.patch('/delivery-status',updateDeliveryStatus);
+// delete route
+route.delete("/cart", removeCartItems);
 
 module.exports = route;

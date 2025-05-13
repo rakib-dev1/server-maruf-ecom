@@ -18,7 +18,6 @@ const addToCart = async (req, res) => {
       return res.status(400).json({ message: "Email is required" });
     }
     const { title, price, images, email, quantity } = req.body;
-    
 
     const cartItems = {
       title,
@@ -50,7 +49,7 @@ const getCartItems = async (req, res) => {
 const removeCartItems = async (req, res) => {
   try {
     const id = req.query.item;
- 
+
     const query = { _id: new ObjectId(id) };
     const cartItems = await db.collection("cart").deleteOne(query);
     res.send(cartItems);
@@ -73,6 +72,9 @@ const orderConfirmItems = async (req, res) => {
     const orderItems = {
       customerInfo,
       paymentMethod,
+      paymentNumber,
+      paymentGateway,
+      trxid,
       totalPrice,
       products,
       deliveryCharge,

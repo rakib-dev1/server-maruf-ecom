@@ -1,6 +1,6 @@
-# Maruf_Ecom Server API Documentation
+# Maruf_Ecom User API Documentation
 
-This document describes all available API routes for the Maruf_Ecom backend, including authentication, user, product, cart, and admin endpoints. Each route includes the HTTP method, endpoint, required parameters, and a description of its functionality.
+This document describes all user-related API routes for the Maruf_Ecom backend. Each route includes the HTTP method, endpoint, required parameters, and a description of its functionality.
 
 ---
 
@@ -15,12 +15,10 @@ http://localhost:5000/
 ## Table of Contents
 
 - [Authentication](#authentication)
-- [User](#user)
+- [User Profile](#user-profile)
 - [Products](#products)
 - [Cart](#cart)
-- [Admin](#admin)
 - [Search](#search)
-- [Middleware](#middleware)
 - [Error Handling](#error-handling)
 
 ---
@@ -30,7 +28,7 @@ http://localhost:5000/
 ### Signup
 
 - **POST** `/auth/signup`
-- **Body:**  
+- **Body:**
   ```json
   {
     "email": "user@example.com",
@@ -44,7 +42,7 @@ http://localhost:5000/
 ### Login
 
 - **POST** `/auth/login`
-- **Body:**  
+- **Body:**
   ```json
   {
     "email": "user@example.com",
@@ -55,7 +53,7 @@ http://localhost:5000/
 
 ---
 
-## User
+## User Profile
 
 ### Get Session User
 
@@ -71,12 +69,12 @@ http://localhost:5000/
 - **PUT** `/user`
 - **Headers:**  
   `Authorization: Bearer <token>`
-- **Body:**  
+- **Body:**
   ```json
   {
     "email": "user@example.com",
     "name": "User Name",
-    "role": "user" // or "admin"
+    "role": "user"
   }
   ```
 - **Description:** Updates user data if the user exists, or adds a new user if not.
@@ -88,7 +86,7 @@ http://localhost:5000/
 ### Get Products (with Filters)
 
 - **GET** `/products`
-- **Query Parameters:**  
+- **Query Parameters:**
   - `category` (optional)
   - `subcategory` (optional)
   - `tags` (optional, comma-separated)
@@ -122,7 +120,7 @@ http://localhost:5000/
 - **POST** `/cart`
 - **Headers:**  
   `Authorization: Bearer <token>`
-- **Body:**  
+- **Body:**
   ```json
   {
     "email": "user@example.com",
@@ -131,19 +129,6 @@ http://localhost:5000/
   }
   ```
 - **Description:** Adds a product to the user's cart.
-
----
-
-## Admin
-
-> **All admin routes require both `authMiddleware` and `verifyAdmin` middlewares.**
-
-### Admin Dashboard
-
-- **GET** `/admin/dashboard`
-- **Headers:**  
-  `Authorization: Bearer <admin_token>`
-- **Description:** Returns admin dashboard data.
 
 ---
 
@@ -156,51 +141,15 @@ http://localhost:5000/
 
 ---
 
-## Middleware
-
-- **authMiddleware:**  
-  Protects routes by requiring a valid JWT token.
-- **verifyAdmin:**  
-  Allows access only to users with the `admin` role.
-
----
-
 ## Error Handling
 
 - All endpoints return appropriate HTTP status codes and error messages for invalid requests, unauthorized access, or server errors.
 
 ---
 
-## Example Usage
-
-### Fetch Products by Category
-
-```http
-GET /products?category=womens-shopping
-```
-
-### Add Product to Cart
-
-```http
-POST /cart
-Authorization: Bearer <token>
-Content-Type: application/json
-
-{
-  "email": "user@example.com",
-  "productId": "123456",
-  "quantity": 2
-}
-```
-
----
-
 ## Notes
 
 - Always include the JWT token in the `Authorization` header for protected routes.
-- Admin routes require the user to have the `admin` role.
 - All responses are in JSON format.
 
 ---
-
-For any questions or issues, please contact the project maintainer.
