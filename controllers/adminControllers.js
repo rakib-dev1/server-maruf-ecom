@@ -140,6 +140,16 @@ const updateDeliveryStatus = async (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
+const getAllCustomers = async (req, res) => {
+  try {
+    const customers = await db.collection("users").find({}).toArray();
+    res.send(customers);
+  } catch (error) {
+    console.error("Error fetching customers:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
 module.exports = {
   updateDeliveryStatus,
+  getAllCustomers
 };

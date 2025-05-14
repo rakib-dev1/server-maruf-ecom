@@ -74,6 +74,7 @@ const orderConfirmItems = async (req, res) => {
     const existingTRXID = await db
       .collection("orders")
       .findOne({ trxid: trxid });
+    console.log(existingTRXID);
     if (existingTRXID) {
       return res.status(400).json({ message: "Transaction ID already exists" });
     }
@@ -87,7 +88,7 @@ const orderConfirmItems = async (req, res) => {
       totalPrice,
       products,
       deliveryCharge,
-      status: "Pending",
+      status: "processing",
       orderDate: new Date(),
     };
 

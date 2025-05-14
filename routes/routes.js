@@ -33,7 +33,10 @@ const {
   updateUser,
   getOrderDetails,
 } = require("../controllers/userControllers");
-const { updateDeliveryStatus } = require("../controllers/adminControllers");
+const {
+  updateDeliveryStatus,
+  getAllCustomers,
+} = require("../controllers/adminControllers");
 
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
@@ -52,6 +55,7 @@ route.get("/recommend", getRecommendedProducts);
 route.get("/orders", authMiddleware, getOrders);
 route.get("/order-details/:id", authMiddleware, verifyAdmin, getOrderDetails);
 route.get("/users", authMiddleware, getUser);
+route.get("/customers", authMiddleware, verifyAdmin, getAllCustomers);
 // post route
 route.post(
   "/add-products",
@@ -77,7 +81,7 @@ route.post("/auth/google", GoogleUser);
 
 // patch route
 route.patch("/update-user", authMiddleware, upload.single("image"), updateUser);
-route.patch('/delivery-status',updateDeliveryStatus);
+route.patch("/delivery-status", updateDeliveryStatus);
 // delete route
 route.delete("/cart", removeCartItems);
 
