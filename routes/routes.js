@@ -49,7 +49,7 @@ route.get("/products/", getProducts);
 route.get("/categories", getCategories);
 route.get("/featured-products", getFeaturedProducts);
 route.get("/highlights", getHighLights);
-route.get("/cart", getCartItems);
+route.get("/cart", authMiddleware, getCartItems);
 route.get("/search", searchTags);
 route.get("/recommend", getRecommendedProducts);
 route.get("/orders", authMiddleware, getOrders);
@@ -64,9 +64,9 @@ route.post(
   upload.array("images", 10),
   addNewProducts
 );
-route.post("/cart", addToCart);
-route.post("/categories", addNewCategory);
-route.post("/order", orderConfirmItems);
+route.post("/cart", authMiddleware, addToCart);
+route.post("/categories", authMiddleware, verifyAdmin, addNewCategory);
+route.post("/order", authMiddleware, orderConfirmItems);
 route.post(
   "/review-post",
   authMiddleware,
@@ -81,8 +81,13 @@ route.post("/auth/google", GoogleUser);
 
 // patch route
 route.patch("/update-user", authMiddleware, upload.single("image"), updateUser);
-route.patch("/delivery-status", updateDeliveryStatus);
+route.patch(
+  "/delivery-status",
+  authMiddleware,
+  verifyAdmin,
+  updateDeliveryStatus
+);
 // delete route
-route.delete("/cart", removeCartItems);
+route.delete("/cart", authMiddleware, removeCartItems);
 
 module.exports = route;
