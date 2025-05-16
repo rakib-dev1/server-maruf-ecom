@@ -41,7 +41,7 @@ const {
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 const route = express.Router();
-route.get("/", (req, res) => res.send("Maruf Ecom Server is running..😘"));
+route.get("/", (req, res) => res.send("FMLIO Server is running..😘"));
 
 // get route
 route.get("/products/:title", getProducts);
