@@ -53,7 +53,7 @@ route.get("/cart", authMiddleware, getCartItems);
 route.get("/search", searchTags);
 route.get("/recommend", getRecommendedProducts);
 route.get("/orders", authMiddleware, getOrders);
-route.get("/order-details/:id", authMiddleware, verifyAdmin, getOrderDetails);
+route.get("/order-details/:id", authMiddleware, getOrderDetails);
 route.get("/users", authMiddleware, getUser);
 route.get("/customers", authMiddleware, verifyAdmin, getAllCustomers);
 // post route

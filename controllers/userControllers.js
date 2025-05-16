@@ -71,26 +71,35 @@ const orderConfirmItems = async (req, res) => {
       deliveryCharge,
       products,
     } = req.body;
-    const existingTRXID = await db
-      .collection("orders")
-      .findOne({ trxid: trxid });
-    console.log(existingTRXID);
-    if (existingTRXID) {
-      return res.status(400).json({ message: "Transaction ID already exists" });
-    }
 
-    const orderItems = {
+    // Prepare order object based on payment method
+    let orderItems = {
       customerInfo,
       paymentMethod,
-      paymentNumber,
-      paymentGateway,
-      trxid,
       totalPrice,
       products,
       deliveryCharge,
       status: "processing",
       orderDate: new Date(),
     };
+
+    if (paymentMethod === "online") {
+      orderItems = {
+        ...orderItems,
+        paymentNumber,
+        paymentGateway,
+        trxid,
+      };
+      const existingTRXID = await db
+        .collection("orders")
+        .findOne({ trxid: trxid });
+      console.log(existingTRXID);
+      if (existingTRXID) {
+        return res
+          .status(400)
+          .json({ message: "Transaction ID already exists" });
+      }
+    }
 
     const result = await db.collection("orders").insertOne(orderItems);
 
