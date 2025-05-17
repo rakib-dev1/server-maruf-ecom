@@ -21,6 +21,8 @@ const {
   authSignup,
   sessionUser,
   GoogleUser,
+  forgotPassword,
+  resetPassword,
 } = require("../controllers/authControllers");
 const multer = require("multer");
 const {
@@ -78,6 +80,8 @@ route.post(
 route.post("/auth/login", authLogin);
 route.post("/auth/signup", authSignup);
 route.post("/auth/google", GoogleUser);
+route.post("/forgot-password", forgotPassword);
+route.post("/reset-password", resetPassword);
 
 // patch route
 route.patch("/update-user", authMiddleware, upload.single("image"), updateUser);

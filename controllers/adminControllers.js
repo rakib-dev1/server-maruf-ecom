@@ -1,16 +1,6 @@
 const { ObjectId } = require("mongodb");
 const { db } = require("../config/db");
 const nodemailer = require("nodemailer");
-// const transporter = nodemailer.createTransport({
-//   service: "gmail",
-//   auth: {
-//     user: process.env.NODEMAILER_EMAIL,
-//     pass: "ncew jbde yziz kcqo",
-//   },
-//   tls: {
-//     rejectUnauthorized: false,
-//   },
-// });
 
 let transporter = nodemailer.createTransport({
   host:"smtp.hostinger.com",

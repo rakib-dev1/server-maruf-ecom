@@ -223,7 +223,6 @@ const searchTags = async (req, res) => {
       return res.status(404).json({ message: "No products found" });
     }
 
-    // Extract matching tag names and titles
     const matchingTags = [];
     const matchingTitles = [];
 
@@ -243,17 +242,16 @@ const searchTags = async (req, res) => {
     const uniqueTags = [...new Set(matchingTags)];
     const uniqueTitles = [...new Set(matchingTitles)];
 
-    // Sort unique tags and titles based on the first occurrence of the query and then alphabetically
+   
     const sortByQueryMatch = (a, b) => {
       const aIndex = a.toLowerCase().indexOf(query.toLowerCase());
       const bIndex = b.toLowerCase().indexOf(query.toLowerCase());
 
-      // First compare by the index of the match
       if (aIndex === bIndex) {
-        // If both match at the same position, then sort alphabetically
+      
         return a.localeCompare(b);
       }
-      return aIndex - bIndex; // Ascending order based on the first match
+      return aIndex - bIndex;
     };
 
     uniqueTags.sort(sortByQueryMatch);
