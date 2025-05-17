@@ -141,7 +141,7 @@ const forgotPassword = async (req, res) => {
         },
       }
     );
-    const resetUrl = `http://localhost:3000/auth/reset-password?token=${resetToken}`;
+    const resetUrl = `https://fmlio.com/auth/reset-password?token=${resetToken}`;
     console.log(ifExistingUser.email);
 
     const emailPayload = {
@@ -216,7 +216,7 @@ const resetPassword = async (req, res) => {
       <div style="padding:32px 24px 24px 24px;background:#fff;">
       <h2 style="color:#222;margin-top:0;">Password Reset Successful</h2>
       <p style="color:#444;font-size:1rem;">Your password has been successfully reset for your fmlio account.</p>
-      <p style="color:#444;font-size:1rem;">You can now <a href="http://localhost:3000/auth/login" style="color:#ff7300;text-decoration:underline;">login to your account</a> with your new password.</p>
+      <p style="color:#444;font-size:1rem;">You can now <a href="https://fmlio.com/auth/login" style="color:#ff7300;text-decoration:underline;">login to your account</a> with your new password.</p>
       <p style="color:#444;font-size:1rem;">If you did not perform this action, please contact our support immediately.</p>
       <hr style="border:none;border-top:1px solid #eee;margin:32px 0 16px 0;">
       <p style="color:#aaa;font-size:0.85rem;text-align:center;">&copy; ${new Date().getFullYear()} fmlio. All rights reserved.</p>
