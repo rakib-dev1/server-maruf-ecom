@@ -18,6 +18,17 @@ const addToCart = async (req, res) => {
       return res.status(400).json({ message: "Email is required" });
     }
     const { title, price, images, email, quantity } = req.body;
+    if (!title || !price || !images || !quantity) {
+      // Find which fields are missing
+      const missingFields = [];
+      if (!title) missingFields.push("title");
+      if (!price) missingFields.push("price");
+      if (!images) missingFields.push("images");
+      if (!quantity) missingFields.push("quantity");
+      return res.status(400).json({
+        message: `${missingFields.join(", ")} is required`,
+      });
+    }
 
     const cartItems = {
       title,
